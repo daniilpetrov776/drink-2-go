@@ -5,8 +5,8 @@
 @import "./common/container.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/header/header.scss";
+@import "./blocks/header/header-logo.scss";
+@import "./blocks/header/header-menu.scss";
+@import "./blocks/header/header-nav.scss";
 @import "./blocks/footer.scss";
-@import "./blocks/header-logo.scss";
-@import "./blocks/header-menu.scss";
-@import "./blocks/header-nav.scss";
