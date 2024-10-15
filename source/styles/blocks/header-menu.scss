@@ -1,5 +1,29 @@
 .header-menu__menu-button-description {
   display: none;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.header-menu__header-menu-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.header-menu__header-menu-button {
+  background: transparent;
+  border: none;
+}
+
+.header-menu__header-menu-list-item {
+  width: 60px;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -7,8 +31,12 @@
 
 }
 
-@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-
+@media (min-width: $tablet-min-width) {
+  .header-menu__header-menu-list-item {
+    &--burger {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: $desktop-min-width) {
