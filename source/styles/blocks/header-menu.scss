@@ -1,0 +1,18 @@
+.header-menu__menu-button-description {
+  display: none;
+}
+
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+
+}
+
+@media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+
+}
+
+@media (min-width: $desktop-min-width) {
+  .header-menu__menu-button-description {
+    display: block;
+  }
+}
