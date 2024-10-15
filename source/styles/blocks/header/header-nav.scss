@@ -17,21 +17,6 @@
 
   width: 100%;
   text-align: center;
-
-  &--active {
-    color: $base-primary;
-  }
-
-  &:hover, &:focus-visible {
-    color: $base-primary;
-  }
-
-  &:active {
-    background-color: $base-secondary;
-  }
-
-  transition: color, background-color 0.3s;
-  transition-timing-function: $smooth;
 }
 
 @media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
@@ -61,6 +46,12 @@
 
   .header-nav__nav-link {
     padding: 22px 0;
+
+    &:active {
+      color: $base-black;
+      background-color: $base-secondary;
+    }
+    transition: background-color, $smooth, 0.3s;
   }
 }
 
@@ -95,5 +86,20 @@
 }
 
 @media (min-width: $desktop-min-width) {
+  .header-nav__nav-link {
+    &--active {
+      color: $base-primary;
+    }
+
+    &:hover, &:focus-visible {
+      color: $base-primary;
+    }
+
+    &:active {
+      background-color: $base-secondary;
+    }
+
+    transition: color $smooth 0.3s, background $smooth 0.3s;
+  }
 
 }
