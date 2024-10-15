@@ -1,0 +1,21 @@
+.socials {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+
+}
+
+@media (min-width: $tablet-min-width) {
+
+}
+
+@media (min-width: $desktop-min-width) {
+
+}

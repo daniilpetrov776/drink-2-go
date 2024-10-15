@@ -47,7 +47,7 @@
                   <svg class="header-menu__header-menu-icon header-menu-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="./icons/stack.svg#user-icon"></use>
                   </svg>
-                  <p class="header-menu__menu-button-description">Войти</p>
+                  <span class="header-menu__menu-button-description">Войти</span>
                 </button>
               </li>
               <li class="header-menu__header-menu-list-item">
@@ -55,7 +55,7 @@
                   <svg class="header-menu__header-menu-icon header-menu-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="./icons/stack.svg#cart-icon"></use>
                   </svg>
-                  <p class="header-menu__menu-button-description">Корзина</p>
+                  <span class="header-menu__menu-button-description">Корзина</span>
                 </button>
               </li>
               <li class="header-menu__header-menu-list-item header-menu__header-menu-list-item--burger js-toggle-button">
@@ -90,11 +90,10 @@
     </main>
     <footer class="footer">
       <div class="container">
-        <h2 class="visually-hidden">Контактная информация и навигация.</h2>
         <div class="footer__footer-wrapper">
           <div class="footer__logo-wrapper">
             <div class="footer__footer-logo footer-logo">
-              <a class="footer-logo__logo-link" href="#"></a>
+              <a class="footer-logo__logo-link" href="#">
                 <picture>
                   <source media="(min-width: 768px)" srcset="./images/logo-desktop.svg" width="170" height="36">
                   <img class="footer-logo__logo-image" src="./images/logo-tablet.svg" width="82" height="36" alt="Логотип компании.">
@@ -129,12 +128,81 @@
           </div>
           <div class="footer__navigation-wrapper">
             <nav class="footer__footer-navigation footer-navigation">
-
+              <div class="footer-navigation__navigation-column">
+                <p class="footer-navigation__footer-title footer-title">Интернет-магазин</p>
+                <ul class="footer-navigation__navigation-list">
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Каталог
+                    </a>
+                  </li>
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Доставка
+                    </a>
+                  </li>
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Способы оплаты
+                    </a>
+                  </li>
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      О нас
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-navigation__navigation-column">
+                <p class="footer-navigation__footer-title footer-title">Медиа</p>
+                <ul class="footer-navigation__navigation-list">
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Блог
+                    </a>
+                  </li>
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Информация для СМИ
+                    </a>
+                  </li>
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Правовая информация
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </nav>
             <div class="footer__footer-contacts footer-contacts">
-
+              <p class="footer-title footer-contacts__footer-title">контакты</p>
+              <div class="footer-contacts-wrapper">
+                <address class="footer-contacts__adress">
+                  <svg class="footer-contacts__adress-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./icons/stack.svg#adress-icon"></use>
+                  </svg>
+                  Санкт-Петербург, набережная реки Карповки, дом 5
+                </address>
+                <div class="footer-contacts__phone-wrapper">
+                  <svg class="footer-contacts__phone-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./icons/stack.svg#phone-icon"></use>
+                  </svg>
+                  <a class="footer-contacts__phone" href="tel:+79999999999">
+                    +7 (999) 999-99-99
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
+          <p class="footer__made-by made-by">
+            разработано в
+            <a class="made-by__made-by-link" href="https://htmlacademy.ru/intensive/adaptive">
+              HTML Academy
+              <svg class="made-by__made-by-icon" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./icons/stack.svg#html-icon"></use>
+              </svg>
+            </a>
+          </p>
         </div>
       </div>
     </footer>

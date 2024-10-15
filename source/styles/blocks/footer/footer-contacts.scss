@@ -1,0 +1,24 @@
+.footer-contacts {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.footer-contacts__adress {
+  font-style: normal;
+}
+
+.footer-contacts__phone {
+  color: $base-black;
+}
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+
+}
+
+@media (min-width: $tablet-min-width) {
+
+}
+
+@media (min-width: $desktop-min-width) {
+
+}

@@ -1,6 +1,10 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
 body {
   font-family: "Montserrat", "Arial", sans-serif;
+  color: $base-black;
+  font-weight: 400;
+  line-height: 12px;
+  font-size: 14px;
 }
 
 img {
