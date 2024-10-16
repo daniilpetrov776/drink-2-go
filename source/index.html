@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <title>Drink2Go</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
+    <script type="module" src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header" data-test="header">
       <div class="container">
         <div class="header__header-wrapper">
           <div class="header__header-logo header-logo">
@@ -23,10 +24,10 @@
             <p class="header-logo__logo-description">Интернет-магазин
               кофейных напитков</p>
           </div>
-          <nav class="header__header-nav header-nav">
+          <nav class="header__header-nav header-nav header-nav--hidden">
             <ul class="header-nav__nav-list">
               <li class="header-nav__nav-list-item">
-                <a href="#" class="header-nav__nav-link">Главная</a>
+                <a href="#" class="header-nav__nav-link header-nav__nav-link--active">Главная</a>
               </li>
               <li class="header-nav__nav-list-item">
                 <a href="#" class="header-nav__nav-link">Каталог</a>
@@ -40,26 +41,26 @@
             </ul>
           </nav>
           <div class="header__header-menu header-menu">
-            <ul class="header-menu__menu-list">
-              <li class="header-menu__menu-list-item">
-                <button class="header-menu__menu-button" type="button">
-                  <svg class="header-menu__menu-icon menu-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ul class="header-menu__header-menu-list">
+              <li class="header-menu__header-menu-list-item">
+                <button class="header-menu__header-menu-button" type="button">
+                  <svg class="header-menu__header-menu-icon header-menu-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="./icons/stack.svg#user-icon"></use>
                   </svg>
+                  <span class="header-menu__menu-button-description">Войти</span>
                 </button>
-                <p class="header-menu__menu-button-description">Войти</p>
               </li>
-              <li class="header-menu__menu-list-item">
-                <button class="header-menu__menu-button" type="button">
-                  <svg class="header-menu__menu-icon menu-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <li class="header-menu__header-menu-list-item">
+                <button class="header-menu__header-menu-button" type="button">
+                  <svg class="header-menu__header-menu-icon header-menu-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="./icons/stack.svg#cart-icon"></use>
                   </svg>
+                  <span class="header-menu__menu-button-description">Корзина</span>
                 </button>
-                <p class="header-menu__menu-button-description">Корзина</p>
               </li>
-              <li class="header-menu__menu-list-item">
-                <button class="header-menu__menu-button" type="button">
-                  <svg class="header-menu__menu-icon menu-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <li class="header-menu__header-menu-list-item header-menu__header-menu-list-item--burger js-toggle-button">
+                <button class="header-menu__header-menu-button" type="button">
+                  <svg class="header-menu__header-menu-icon header-menu-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="./icons/stack.svg#burger-icon"></use>
                   </svg>
                 </button>
@@ -70,6 +71,99 @@
       </div>
     </header>
     <main>
+      <h1 class="visually-hidden">Необычные кофейные напитки.</h1>
+      <section class="slider" data-test="hero">
+        <div class="container">
+          <div class="slider__slider-wrapper">
+            <div class="slider__slides-cutter">
+              <div class="slider__slides-wrapper">
+                <div class="slider__slide slide">
+                  <div class="slide__slide-image-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="images/hero/hero-1-desktop@1x.webp 1x, images/hero/hero-1-desktop@2x.webp 2x" width="600" height="600">
+                      <source media="(min-width: 1440px)" srcset="images/hero/hero-1-desktop@1x.png 1x, images/hero/hero-1-desktop@2x.png 2x" width="600" height="600">
+                      <source media="(min-width: 768px)" srcset="images/hero/hero-1-tablet@1x.webp 1x, images/hero/hero-1-tablet@2x.webp 2x" width="476" height="476">
+                      <source media="(min-width: 768px)" srcset="images/hero/hero-1-tablet@1x.png 1x, images/hero/hero-1-tablet@2x.png 2x" width="476" height="476">
+                      <source media="(min-width: 320px)" srcset="images/hero/hero-1-mobile@1x.webp 1x, images/hero/hero-1-mobile@2x.webp 2x">
+                      <img class="slide__slide-image" src="images/hero/hero-1-mobile@1x.png" srcset="images/hero/hero-1-mobile@2x.png 2x" width="280" height="280" alt="Кофе без кофеина.">
+                    </picture>
+                  </div>
+                  <div class="slide__slide-content-wrapper">
+                    <span class="slide__slide-new">Новинка!</span>
+                    <h2 class="slide__slide-title">Декаф Флэт Уайт</h2>
+                    <p class="slide__slide-description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                    <div class="slide__price-wrapper">
+                      <span class="slide__old-price">295₽</span>
+                      <span class="slide__new-price">225₽</span>
+                      <button class="slide__order-button button button--primary button--small">Заказать</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__slide slide">
+                  <div class="slide__slide-image-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="images/hero/hero-2-desktop@1x.webp 1x, images/hero/hero-2-desktop@2x.webp 2x" width="600" height="600">
+                      <source media="(min-width: 1440px)" srcset="images/hero/hero-2-desktop@1x.png 1x, images/hero/hero-2-desktop@2x.png 2x" width="600" height="600">
+                      <source media="(min-width: 768px)" srcset="images/hero/hero-2-tablet@1x.webp 1x, images/hero/hero-2-tablet@2x.webp 2x" width="476" height="476">
+                      <source media="(min-width: 768px)" srcset="images/hero/hero-2-tablet@1x.png 1x, images/hero/hero-2-tablet@2x.png 2x" width="476" height="476">
+                      <source media="(min-width: 320px)" srcset="images/hero/hero-2-mobile@1x.webp 1x, images/hero/hero-2-mobile@2x.webp 2x">
+                      <img class="slide__slide-image" src="images/hero/hero-2-mobile@1x.png" srcset="images/hero/hero-2-mobile@2x.png 2x" width="280" height="280" alt="Кофе без кофеина.">
+                    </picture>
+                  </div>
+                  <div class="slide__slide-content-wrapper">
+                    <span class="slide__slide-new">Новинка!</span>
+                    <h2 class="slide__slide-title">Лавендер Латте</h2>
+                    <p class="slide__slide-description">Лавендер Латте — идеально для расслабления: кофе без кофеина с натуральным фермерским молоком и ароматом лаванды.</p>
+                    <div class="slide__price-wrapper">
+                      <span class="slide__old-price">350₽</span>
+                      <span class="slide__new-price">299₽</span>
+                      <button class="slide__order-button button button--primary button--small">Заказать</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__slide slide">
+                  <div class="slide__slide-image-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)" srcset="images/hero/hero-3-desktop@1x.webp 1x, images/hero/hero-3-desktop@2x.webp 2x" width="600" height="600">
+                      <source media="(min-width: 1440px)" srcset="images/hero/hero-3-desktop@1x.png 1x, images/hero/hero-3-desktop@2x.png 2x" width="600" height="600">
+                      <source media="(min-width: 768px)" srcset="images/hero/hero-3-tablet@1x.webp 1x, images/hero/hero-3-tablet@2x.webp 2x" width="476" height="476">
+                      <source media="(min-width: 768px)" srcset="images/hero/hero-3-tablet@1x.png 1x, images/hero/hero-3-tablet@2x.png 2x" width="476" height="476">
+                      <source media="(min-width: 320px)" srcset="images/hero/hero-3-mobile@1x.webp 1x, images/hero/hero-3-mobile@2x.webp 2x">
+                      <img class="slide__slide-image" src="images/hero/hero-3-mobile@1x.png" srcset="images/hero/hero-3-mobile@2x.png 2x" width="280" height="280" alt="Кофе без кофеина.">
+                    </picture>
+                  </div>
+                  <div class="slide__slide-content-wrapper">
+                    <span class="slide__slide-new">Новинка!</span>
+                    <h2 class="slide__slide-title">Трипл Эспрессо</h2>
+                    <p class="slide__slide-description">
+                      Трипл Эспрессо: Уникальный безкофеиновый напиток с насыщенным вкусом эфиопского кофе и добавлением натурального фермерского молока. Восстанови силы после трудового дня!</p>
+                    <div class="slide__price-wrapper">
+                      <span class="slide__old-price">200₽</span>
+                      <span class="slide__new-price">149₽</span>
+                      <button class="slide__order-button button button--primary button--small">Заказать</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="slider__slider-button slider-button slider-button--prev">
+              <svg class="slider-button__slider-arrow slider-button__slider-arrow--prev" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./icons/stack.svg#arrow-left-icon"></use>
+              </svg>
+            </button>
+            <button class="slider__slider-button slider-button slider-button--next">
+              <svg class="slider-button__slider-arrow slider-button__slider-arrow--next" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./icons/stack.svg#arrow-right-icon"></use>
+              </svg>
+            </button>
+            <div class="slider__slider-pagination">
+              <button class="slider__slider-pagination-button slider__slider-pagination-button--active" type="button" aria-label="переключить слайд"></button>
+              <button class="slider__slider-pagination-button" type="button" aria-label="переключить слайд"></button>
+              <button class="slider__slider-pagination-button" type="button" aria-label="переключить слайд"></button>
+            </div>
+          </div>
+        </div>
+      </section>
       <h1>Страница для старта</h1>
       <p>контент</p>
       <p>контент</p>
@@ -87,9 +181,122 @@
       <p>контент</p>
       <p>контент</p>
     </main>
-    <footer class="footer">
+    <footer class="footer" data-test="footer">
       <div class="container">
-        Подвал
+        <div class="footer__footer-wrapper">
+          <div class="footer__logo-wrapper">
+            <div class="footer__footer-logo footer-logo">
+              <a class="footer-logo__logo-link" href="#">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./images/logo-desktop.svg" width="170" height="36">
+                  <img class="footer-logo__logo-image" src="./images/logo-tablet.svg" width="82" height="36" alt="Логотип компании.">
+                </picture>
+              </a>
+              <p class="footer-logo__logo-description">Интернет-магазин
+                кофейных напитков</p>
+            </div>
+            <ul class="footer__socials socials">
+              <li class="socials__socials-item">
+                <a class="socials__socials-link" href="#">
+                  <svg class="socials__socials-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./icons/stack.svg#vk-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__socials-item">
+                <a class="socials__socials-link socials__socials-link--smaller" href="#">
+                  <svg class="socials__socials-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./icons/stack.svg#pinterest-icon"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="socials__socials-item">
+                <a class="socials__socials-link" href="#">
+                  <svg class="socials__socials-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./icons/stack.svg#ok-icon"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__navigation-wrapper">
+            <nav class="footer__footer-navigation footer-navigation">
+              <div class="footer-navigation__navigation-column">
+                <p class="footer-navigation__footer-title footer-title">Интернет-магазин</p>
+                <ul class="footer-navigation__navigation-list">
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Каталог
+                    </a>
+                  </li>
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Доставка
+                    </a>
+                  </li>
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Способы оплаты
+                    </a>
+                  </li>
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      О нас
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-navigation__navigation-column">
+                <p class="footer-navigation__footer-title footer-title">Медиа</p>
+                <ul class="footer-navigation__navigation-list">
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Блог
+                    </a>
+                  </li>
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Информация для СМИ
+                    </a>
+                  </li>
+                  <li class="footer-navigation__navigation-list-item">
+                    <a href="#" class="footer-navigation__navigation-link">
+                      Правовая информация
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div class="footer__footer-contacts footer-contacts">
+              <p class="footer-title footer-contacts__footer-title">контакты</p>
+              <div class="footer-contacts-wrapper">
+                <address class="footer-contacts__adress">
+                  <svg class="footer-contacts__adress-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./icons/stack.svg#adress-icon"></use>
+                  </svg>
+                  Санкт-Петербург, набережная реки Карповки, дом 5
+                </address>
+                <div class="footer-contacts__phone-wrapper">
+                  <svg class="footer-contacts__phone-icon" width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="./icons/stack.svg#phone-icon"></use>
+                  </svg>
+                  <a class="footer-contacts__phone" href="tel:+79999999999">
+                    +7 (999) 999-99-99
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="footer__made-by made-by">
+            разработано в
+            <a class="made-by__made-by-link" href="https://htmlacademy.ru/intensive/adaptive">
+              HTML Academy
+              <svg class="made-by__made-by-icon" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="./icons/stack.svg#html-icon"></use>
+              </svg>
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   </body>

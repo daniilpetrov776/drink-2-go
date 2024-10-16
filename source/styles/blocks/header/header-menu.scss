@@ -1,0 +1,121 @@
+.header-menu__menu-button-description {
+  display: none;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.header-menu__header-menu-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+}
+
+.header-menu__header-menu-button {
+  background: transparent;
+  border: none;
+}
+
+.header-menu__header-menu-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media #{$mobile-only} {
+  .header-menu {
+    max-width: 70%;
+  }
+
+  .header-menu__header-menu-button {
+    &:active,
+    &:active svg {
+      background-color: $base-secondary;
+      color: $base-black;
+    }
+
+    transition: color $smooth 0.3s, background $smooth 0.3s;
+  }
+
+  .header-menu__header-menu-list-item {
+    width: 60px;
+  }
+}
+
+@media #{$not-mobile} {
+  .header-menu {
+    max-width: 25%;
+  }
+
+  .header-menu__header-menu-list-item {
+    min-width: 60px;
+    min-height: 80px;
+
+    &--burger {
+      display: none;
+    }
+  }
+
+  .header-menu__header-menu-button {
+    padding: 30px 20px;
+
+    &:active,
+    &:active svg {
+      background-color: $base-secondary;
+      color: $base-black;
+    }
+
+    transition: color $smooth 0.3s, background $smooth 0.3s;
+  }
+}
+
+@media #{$desktop-only} {
+  .header-menu {
+    max-width: 20%;
+  }
+
+  .header-menu__header-menu-list {
+    gap: 20px;
+  }
+
+  .header-menu__header-menu-button {
+    display: flex;
+    flex-flow: nowrap;
+    align-items: center;
+    gap: 8px;
+    padding: 32px 20px;
+
+    &:hover span,
+    &:focus-visible span {
+      color: $base-primary;
+    }
+
+    &:hover svg,
+    &:focus-visible svg {
+      color: $base-primary;
+    }
+
+    &:active {
+      background-color: $base-secondary;
+    }
+
+    transition: color $smooth 0.3s, background $smooth 0.3s;
+  }
+
+  .header-menu__menu-button-description {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: $base-black;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    display: block;
+    margin: 0;
+  }
+}

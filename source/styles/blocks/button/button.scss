@@ -1,0 +1,44 @@
+.button {
+  min-height: 40px;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  font-family: inherit;
+  color: $base-white;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+
+  &--primary {
+    background-color: $base-primary;
+
+    &:hover, &:focus-visible {
+      background-color: $primary-lighter;
+    }
+
+    &:active {
+      background-color: $primary-darker;
+    }
+    transition: background $smooth 0.3s;
+  }
+
+  &--small {
+    min-width: 113px;
+  }
+}
+
+@media #{$mobile-only} {
+
+}
+
+@media #{$not-mobile} {
+
+}
+
+@media #{$desktop-only} {
+
+}

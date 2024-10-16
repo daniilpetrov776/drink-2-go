@@ -1,0 +1,20 @@
+.footer-logo__logo-description {
+  display: none;
+}
+
+@media #{$mobile-only} {
+
+}
+
+@media #{$not-mobile} {
+
+}
+
+@media #{$desktop-only} {
+  .footer-logo__logo-description {
+    display: block;
+    margin: 10px 0 50px;
+
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,31 @@
+.header-logo__logo-description {
+  display: none;
+}
+
+@media #{$mobile-only} {
+
+}
+
+@media #{$not-mobile} {
+
+}
+
+@media #{$desktop-only} {
+  .header-logo {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header-logo__logo-description {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    width: 126px;
+  }
+}
