@@ -11,9 +11,19 @@
   color: $base-white;
   font-size: 16px;
   line-height: 24px;
+  cursor: pointer;
 
   &--primary {
     background-color: $base-primary;
+
+    &:hover, &:focus-visible {
+      background-color: $primary-lighter;
+    }
+
+    &:active {
+      background-color: $primary-darker;
+    }
+    transition: background $smooth 0.3s;
   }
 
   &--small {
