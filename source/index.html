@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <title>Drink2Go</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header" data-test="header">
       <div class="container">
         <div class="header__header-wrapper">
           <div class="header__header-logo header-logo">
@@ -71,6 +71,50 @@
       </div>
     </header>
     <main>
+      <section class="slider" data-test="hero">
+        <div class="container">
+          <h1 class="visually-hidden">Необычные кофейные напитки.</h1>
+          <div class="slider__slider-wrapper">
+            <div class="slider__slide slide">
+              <div class="slide__slide-image-wrapper">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="images/hero/hero-1-desktop@1x.webp 1x, images/hero/hero-1-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="images/hero/hero-1-desktop@1x.png 1x, images/hero/hero-1-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="images/hero/hero-1-tablet@1x.webp 1x, images/hero/hero-1-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="images/hero/hero-1-tablet@1x.png 1x, images/hero/hero-1-tablet@2x.png 2x">
+                  <source media="(min-width: 320px)" srcset="images/hero/hero-1-mobile@1x.webp 1x, images/hero/hero-1-mobile@2x.webp 2x">
+                  <img class="slide__slide-image" src="images/hero/hero-1-mobile@1x.png" srcset="images/hero/hero-1-mobile@2x.png 2x" width="280" height="280" alt="Кофе без кофеина.">
+                </picture>
+              </div>
+              <div class="slide__slide-content-wrapper">
+                <span class="slide__slide-new">Новинка!</span>
+                <h2 class="slide__slide-title">Декаф Флэт Уайт</h2>
+                <p class="slide__slide-description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                <div class="slide__price-wrapper">
+                  <span class="slide__old-price">295₽</span>
+                  <span class="slide__new-price">225₽</span>
+                  <button class="slide__order-button button button--primary button--small">Заказать</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider__slider-pagination">
+            <button class="slider__slider-pagination-button" type="button" aria-label="переключить слайд"></button>
+            <button class="slider__slider-pagination-button" type="button" aria-label="переключить слайд"></button>
+            <button class="slider__slider-pagination-button" type="button" aria-label="переключить слайд"></button>
+          </div>
+          <button class="slider__slider-button slider-button slider-button--prev">
+            <svg class="slider-button__slider-arrow slider-button__slider-arrow--prev" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./icons/stack.svg#arrow-left-icon"></use>
+            </svg>
+          </button>
+          <button class="slider__slider-button slider-button slider-button--next">
+            <svg class="slider-button__slider-arrow slider-button__slider-arrow--next" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="./icons/stack.svg#arrow-right-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
       <h1>Страница для старта</h1>
       <p>контент</p>
       <p>контент</p>
@@ -88,7 +132,7 @@
       <p>контент</p>
       <p>контент</p>
     </main>
-    <footer class="footer">
+    <footer class="footer" data-test="footer">
       <div class="container">
         <div class="footer__footer-wrapper">
           <div class="footer__logo-wrapper">

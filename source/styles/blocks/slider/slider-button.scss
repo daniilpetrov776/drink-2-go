@@ -1,0 +1,43 @@
+.slider-button {
+  width: 20px;
+  height: 656px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+}
+
+.slider-button__slider-arrow {
+  color: $base-primary;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+}
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+
+}
+
+@media (min-width: $tablet-min-width) {
+
+}
+
+@media (min-width: $desktop-min-width) {
+
+}

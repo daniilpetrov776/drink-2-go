@@ -24,7 +24,8 @@
     padding: 9px;
   }
 
-  &:hover, &:focus-visible {
+  &:hover,
+  &:focus-visible {
     background-color: $base-secondary;
     color: $base-primary;
   }

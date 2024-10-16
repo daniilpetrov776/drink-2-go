@@ -1,0 +1,36 @@
+.slider {
+  background-color: $flat-white;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100vw;
+    bottom: 0;
+    left: calc((100vw - 100%) / -2);
+    background-color: $flat-white;
+  }
+}
+
+.slider__slider-wrapper {
+  position: relative;
+}
+
+.slider__slider-pagination {
+  display: none;
+}
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+
+}
+
+@media (min-width: $tablet-min-width) {
+
+}
+
+@media (min-width: $desktop-min-width) {
+  .slider__slider-pagination {
+    display: block;
+  }
+}

@@ -1,0 +1,74 @@
+.slide {
+  padding: 20px 0 60px;
+}
+
+.slide__slide-new {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: $base-primary;
+  text-transform: uppercase;
+}
+
+.slide__slide-image-wrapper {
+  margin: 0 0 10px;
+}
+
+.slide__slide-content-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.slide__slide-title {
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  text-align: center;
+
+  margin: 4px 0 10px;
+}
+
+.slide__slide-description {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.slide__price-wrapper {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.slide__old-price {
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-primary;
+  text-decoration: line-through;
+  margin: 0 6px 0 0;
+}
+
+.slide__new-price {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  margin: 0 20px 0 0;
+}
+
+@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+
+}
+
+@media (min-width: $tablet-min-width) {
+
+}
+
+@media (min-width: $desktop-min-width) {
+
+}

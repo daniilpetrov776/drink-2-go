@@ -39,7 +39,8 @@
 .footer-contacts__phone {
   color: $base-black;
 
-  &:hover, &:focus-visible {
+  &:hover,
+  &:focus-visible {
     color: $primary-lighter;
   }
 

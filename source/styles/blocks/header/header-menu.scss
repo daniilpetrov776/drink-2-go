@@ -33,7 +33,8 @@
   }
 
   .header-menu__header-menu-button {
-    &:active, &:active svg {
+    &:active,
+    &:active svg {
       background-color: $base-secondary;
       color: $base-black;
     }
@@ -44,7 +45,6 @@
   .header-menu__header-menu-list-item {
     width: 60px;
   }
-
 }
 
 @media (min-width: $tablet-min-width) {
@@ -64,7 +64,8 @@
   .header-menu__header-menu-button {
     padding: 32px 20px;
 
-    &:active, &:active svg {
+    &:active,
+    &:active svg {
       background-color: $base-secondary;
       color: $base-black;
     }
@@ -88,11 +89,13 @@
     align-items: center;
     gap: 8px;
 
-    &:hover span, &:focus-visible span {
+    &:hover span,
+    &:focus-visible span {
       color: $base-primary;
     }
 
-    &:hover svg, &:focus-visible svg {
+    &:hover svg,
+    &:focus-visible svg {
       color: $base-primary;
     }
 

@@ -29,7 +29,7 @@
 }
 
 @media (min-width: $tablet-min-width) {
-  .made-by__made-by-link  {
+  .made-by__made-by-link {
     &:active {
       color: $primary-darker;
     }
@@ -44,11 +44,13 @@
   }
 
   .made-by__made-by-link {
-    &:hover, &:focus-visible {
+    &:hover,
+    &:focus-visible {
       color: $base-primary;
     }
 
-    &:hover svg, &:focus-visible svg {
+    &:hover svg,
+    &:focus-visible svg {
       color: $base-primary;
     }
 
