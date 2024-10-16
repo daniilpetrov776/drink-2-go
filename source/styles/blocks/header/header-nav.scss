@@ -19,7 +19,7 @@
   text-align: center;
 }
 
-@media (max-width: $mobile-max-width) {
+@media #{$mobile-only} {
   .header-nav {
     position: absolute;
     transform: translateY(-300px);
@@ -55,7 +55,7 @@
   }
 }
 
-@media (min-width: $tablet-min-width) {
+@media #{$not-mobile} {
   .header-nav {
     max-width: 55%;
     // display: block;
@@ -85,13 +85,7 @@
   }
 }
 
-@media (min-width: 768px) {
-  // .header-nav {
-  //   display: block;
-  // }
-}
-
-@media (min-width: $desktop-min-width) {
+@media #{$desktop-only} {
   .header-nav__nav-link {
     &--active {
       color: $base-primary;

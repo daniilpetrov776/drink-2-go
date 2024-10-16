@@ -38,16 +38,16 @@
   transition: color $smooth 0.3s, background $smooth 0.3s;
 }
 
-@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+@media #{$mobile-only} {
 
 }
 
-@media (min-width: $tablet-min-width) {
+@media #{$not-mobile} {
   .socials {
     max-width: 500px;
   }
 }
 
-@media (min-width: $desktop-min-width) {
+@media #{$desktop-only} {
 
 }

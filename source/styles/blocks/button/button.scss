@@ -21,14 +21,14 @@
   }
 }
 
-@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+@media #{$mobile-only} {
 
 }
 
-@media (min-width: $tablet-min-width) {
+@media #{$not-mobile} {
 
 }
 
-@media (min-width: $desktop-min-width) {
+@media #{$desktop-only} {
 
 }

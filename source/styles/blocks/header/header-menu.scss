@@ -27,7 +27,7 @@
 }
 
 
-@media (min-width: $mobile-min-width) and (max-width: $mobile-max-width) {
+@media #{$mobile-only} {
   .header-menu {
     max-width: 70%;
   }
@@ -47,7 +47,7 @@
   }
 }
 
-@media (min-width: $tablet-min-width) {
+@media #{$not-mobile} {
   .header-menu {
     max-width: 25%;
   }
@@ -62,7 +62,7 @@
   }
 
   .header-menu__header-menu-button {
-    padding: 32px 20px;
+    padding: 30px 20px;
 
     &:active,
     &:active svg {
@@ -74,7 +74,7 @@
   }
 }
 
-@media (min-width: $desktop-min-width) {
+@media #{$desktop-only} {
   .header-menu {
     max-width: 20%;
   }
