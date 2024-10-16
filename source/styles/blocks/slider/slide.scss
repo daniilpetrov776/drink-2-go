@@ -1,5 +1,8 @@
 .slide {
   padding: 20px 0 60px;
+  min-width: 100%;
+
+  transition: transform $smooth 1s;
 }
 
 .slide__slide-new {
@@ -44,7 +47,7 @@
   flex-flow: wrap;
   row-gap: 15px;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 24px;
 }
 
 .slide__old-price {

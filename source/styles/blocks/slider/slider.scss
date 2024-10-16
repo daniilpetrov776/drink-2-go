@@ -17,6 +17,16 @@
   position: relative;
 }
 
+.slider__slides-cutter {
+  overflow: hidden;
+}
+
+.slider__slides-wrapper {
+  display: flex;
+  flex-flow: nowrap;
+  align-items: center;
+}
+
 .slider__slider-pagination {
   display: none;
 }
