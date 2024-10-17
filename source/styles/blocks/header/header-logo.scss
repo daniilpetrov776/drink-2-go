@@ -3,11 +3,17 @@
 }
 
 @media #{$mobile-only} {
-
+  .header-logo__header-logo-image-wrapper {
+    width: 32px;
+    height: 36px;
+  }
 }
 
 @media #{$not-mobile} {
-
+  .header-logo__header-logo-image-wrapper {
+    width: 82px;
+    height: 36px;
+  }
 }
 
 @media #{$desktop-only} {
@@ -27,5 +33,10 @@
     flex-flow: wrap;
     align-items: center;
     width: 126px;
+  }
+
+  .header-logo__header-logo-image-wrapper {
+    width: 170px;
+    height: 36px;
   }
 }

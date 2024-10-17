@@ -16,7 +16,8 @@
   &--primary {
     background-color: $base-primary;
 
-    &:hover, &:focus-visible {
+    &:hover,
+    &:focus-visible {
       background-color: $primary-lighter;
     }
 
