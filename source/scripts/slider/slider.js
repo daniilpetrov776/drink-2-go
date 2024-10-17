@@ -3,7 +3,26 @@ const slides = Array.from(slider.children);
 const prevButton = document.querySelector('.slider-button--prev');
 const nextButton = document.querySelector('.slider-button--next');
 
+const backgroundColors = ['#F3EBE1', '#EAE6FC', '#E5E6E8'];
+const viewportWidth = window.innerWidth;
+
 let currentIndex = 0;
+
+const updateBackground = () => {
+  const sliderContainer = document.querySelector('.slider');
+
+  if (viewportWidth >= 768 && viewportWidth <= 1439) {
+    sliderContainer.style.background = `linear-gradient(
+      to bottom,
+      ${backgroundColors[currentIndex % backgroundColors.length]} 0%,
+      ${backgroundColors[currentIndex % backgroundColors.length]} calc(100% - 188px),
+      #FFFFFF calc(100% - 188px),
+      #FFFFFF 100%
+  )`;
+  } else {
+    sliderContainer.style.backgroundColor = backgroundColors[currentIndex % backgroundColors.length];
+  }
+};
 
 export const updateSlider = () => {
   const slideWidth = slides[0].getBoundingClientRect().width;
@@ -19,6 +38,7 @@ export const updateSlider = () => {
   paginationButtons.forEach((button, index) => {
     button.classList.toggle('slider__slider-pagination-button--active', index === currentIndex);
   });
+  updateBackground();
 };
 
 prevButton.addEventListener('click', () => {

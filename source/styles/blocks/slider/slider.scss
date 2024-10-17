@@ -2,6 +2,8 @@
   background-color: $flat-white;
   position: relative;
 
+  transition: background $smooth 0.5s;
+
   // &::before {
   //   position: absolute;
   //   content: "";
@@ -43,14 +45,14 @@
 }
 
 @media #{$tablet-only} {
-  .slider {
+  .slider.slider--gradient {
     background: linear-gradient(
-    to bottom,
-    $flat-white 0%,
-    $flat-white calc(100% - 188px),
-    $base-white calc(100% - 188px),
-    $base-white 100%
-  );
+      to bottom,
+      $flat-white 0%,
+      $flat-white calc(100% - 188px),
+      $base-white calc(100% - 188px),
+      $base-white 100%
+    );
   }
 }
 

@@ -7,13 +7,19 @@ $mobile-max-width: 767px;
 
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1440px;
-$breakpoint-gap: 0.02px;
+$breakpoint-gap: 0.05px;
 
-$mobile-only: "(max-width: #{$breakpoint-tablet - $breakpoint-gap})";
-$tablet-only: "(min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - $breakpoint-gap})";
-$desktop-only: "(min-width: #{$breakpoint-desktop})";
-$not-mobile: "(min-width: #{$breakpoint-tablet})";
-$not-desktop: "(max-width: #{$breakpoint-desktop - $breakpoint-gap})";
+// $mobile-only: "(max-width: #{$breakpoint-tablet - $breakpoint-gap})";
+// $tablet-only: "(min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-desktop - $breakpoint-gap})";
+// $desktop-only: "(min-width: #{$breakpoint-desktop})";
+// $not-mobile: "(min-width: #{$breakpoint-tablet})";
+// $not-desktop: "(max-width: #{$breakpoint-desktop - $breakpoint-gap})";
+
+$mobile-only: "(width <= #{$mobile-max-width})";
+$tablet-only: "(#{$tablet-min-width} <= width <= #{$tablet-max-width})";
+$desktop-only: "(width >= #{$desktop-min-width})";
+$not-mobile: "(width >= #{$tablet-min-width})";
+$not-desktop: "(width <= #{$desktop-min-width})";
 
 // base colors
 $base-white: #ffffff;
