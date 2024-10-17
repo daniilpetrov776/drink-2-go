@@ -1,0 +1,33 @@
+.feature {
+  display: flex;
+  flex-flow: wrap column;
+  place-items: center;
+}
+
+.feature__feature-content-wrapper {
+  display: flex;
+  flex-flow: wrap;
+  place-content: center;
+}
+
+.feature__feature-description {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+@media #{$mobile-only} {
+
+}
+
+@media #{$not-mobile} {
+
+}
+
+@media #{$tablet-only} {
+
+}
+
+@media #{$desktop-only} {
+
+}
