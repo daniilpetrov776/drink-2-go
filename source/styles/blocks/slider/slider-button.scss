@@ -9,33 +9,38 @@
 
   &--prev {
     left: -20px;
-    &:hover, &:focus-visible {
+
+    &:hover,
+    &:focus-visible {
       background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
     }
 
     &:active {
-      background: linear-gradient(to left,#7859CF00, #7859CF40);
+      background: linear-gradient(to left, #7859cf00, #7859cf40);
     }
-
   }
 
   &--next {
     right: -20px;
-    &:hover, &:focus-visible {
-      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+
+    &:hover,
+    &:focus-visible {
+      background: linear-gradient(to right, #ffffff00, #ffffff);
     }
 
     &:active {
-      background: linear-gradient(to right,#7859CF00, #7859CF40);
+      background: linear-gradient(to right, #7859cf00, #7859cf40);
     }
   }
 
-  &:disabled  .slider-button__slider-arrow{
+  &:disabled .slider-button__slider-arrow {
     color: $base-grey;
   }
 
   &:disabled {
-    &:hover, &:focus-visible, &:active {
+    &:hover,
+    &:focus-visible,
+    &:active {
       background: transparent;
     }
   }

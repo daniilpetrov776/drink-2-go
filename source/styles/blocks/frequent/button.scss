@@ -16,7 +16,8 @@
   &--primary {
     background-color: $base-primary;
 
-    &:hover, &:focus-visible {
+    &:hover,
+    &:focus-visible {
       background-color: $primary-lighter;
     }
 
@@ -26,8 +27,18 @@
     transition: background $smooth 0.3s;
   }
 
+  &--secondary {
+    background-color: $base-white;
+    color: $base-primary;
+  }
+
   &--small {
     min-width: 113px;
+  }
+
+  &--catalog {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 

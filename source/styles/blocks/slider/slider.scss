@@ -2,6 +2,8 @@
   background-color: $flat-white;
   position: relative;
 
+  transition: background $smooth 0.5s;
+
   // &::before {
   //   position: absolute;
   //   content: "";
@@ -43,14 +45,15 @@
 }
 
 @media #{$tablet-only} {
-  .slider {
-    background: linear-gradient(
-    to bottom,
-    $flat-white 0%,
-    $flat-white calc(100% - 188px),
-    $base-white calc(100% - 188px),
-    $base-white 100%
-  );
+  .slider.slider--gradient {
+    background:
+      linear-gradient(
+        to bottom,
+        $flat-white 0%,
+        $flat-white calc(100% - 188px),
+        $base-white calc(100% - 188px),
+        $base-white 100%
+      );
   }
 }
 
@@ -64,7 +67,7 @@
     flex-flow: wrap;
     place-content: center;
     gap: 8px;
-    padding: 10px 0 10px;
+    padding: 10px 0;
   }
 
   .slider__slider-pagination-button {
@@ -80,7 +83,8 @@
       background-color: $base-primary;
     }
 
-    &:hover, &:focus-visible {
+    &:hover,
+    &:focus-visible {
       background-color: $primary-opacity;
     }
 
@@ -88,11 +92,8 @@
 
     &::after {
       content: "";
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+      position: absolute;
+      inset: -10px;
     }
   }
 }

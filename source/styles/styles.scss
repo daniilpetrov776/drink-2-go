@@ -16,9 +16,32 @@
 @import "./blocks/footer/footer-title.scss";
 @import "./blocks/footer/footer-contacts.scss";
 @import "./blocks/footer/made-by.scss";
-
 @import "./blocks/slider/slider.scss";
 @import "./blocks/slider/slide.scss";
 @import "./blocks/slider/slider-button.scss";
+@import "./blocks/frequent/button.scss";
+@import "./blocks/frequent/text-title.scss";
+@import "./blocks/frequent/price.scss";
+@import "./blocks/frequent/section-title.scss";
+@import "./blocks/frequent/article-title.scss";
+@import "./blocks/features/features.scss";
+@import "./blocks/features/feature.scss";
+@import "./blocks/map/map.scss";
 
-@import "./blocks/button/button.scss";
+@import "./blocks/catalog/catalog.scss";
+
+@import "./blocks/catalog/form/catalog-filter.scss";
+@import "./blocks/catalog/form/price-slider.scss";
+@import "./blocks/catalog/form/type-radio.scss";
+@import "./blocks/catalog/form/origin-checkboxes.scss";
+@import "./blocks/catalog/form/filter-controls.scss";
+@import "./blocks/catalog/form/filter-select.scss";
+@import "./blocks/catalog/form/form-title.scss";
+@import "./blocks/catalog/form/radio-item.scss";
+@import "./blocks/catalog/form/checkbox-item.scss";
+@import "./blocks/catalog/form/noui-slider.scss";
+
+@import "./blocks/catalog/catalog-items.scss";
+@import "./blocks/catalog/catalog-product.scss";
+@import "./blocks/catalog/pagination.scss";
+@import "./blocks/catalog/pagination-button.scss";

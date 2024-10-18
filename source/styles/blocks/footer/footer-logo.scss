@@ -2,12 +2,19 @@
   display: none;
 }
 
-@media #{$mobile-only} {
 
+@media #{$mobile-only} {
+  .footer-logo__footer-logo-image-wrapper {
+    width: 82px;
+    height: 36px;
+  }
 }
 
 @media #{$not-mobile} {
-
+  .footer-logo__footer-logo-image-wrapper {
+    width: 170px;
+    height: 36px;
+  }
 }
 
 @media #{$desktop-only} {
