@@ -30,6 +30,11 @@
   &--small {
     min-width: 113px;
   }
+
+  &--catalog {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media #{$mobile-only} {

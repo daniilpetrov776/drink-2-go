@@ -17,8 +17,8 @@
             <div class="header-logo__header-logo-image-wrapper">
               <a class="header-logo__logo-link" href="#">
                 <picture>
-                  <source media="(min-width: 1440px)" srcset="./images/logo-desktop.svg" width="170" height="36" type="image/svg">
-                  <source media="(min-width: 768px)" srcset="./images/logo-tablet.svg" width="82" height="36" type="image/svg">
+                  <source media="(min-width: 1440px)" srcset="./images/logo-desktop.svg" width="170" height="36" type="image/svg+xml">
+                  <source media="(min-width: 768px)" srcset="./images/logo-tablet.svg" width="82" height="36" type="image/svg+xml">
                   <img class="header-logo__logo-image" src="./images/logo-mobile.svg" width="32" height="36" alt="Логотип компании.">
                 </picture>
               </a>
@@ -96,7 +96,7 @@
                     <p class="slide__slide-description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                     <div class="slide__price-wrapper">
                       <span class="slide__old-price">295₽</span>
-                      <span class="slide__new-price">225₽</span>
+                      <span class="slide__new-price price">225₽</span>
                       <button class="slide__order-button button button--primary button--small" type="button">Заказать</button>
                     </div>
                   </div>
@@ -256,64 +256,258 @@
                   <div class="price-slider__nouislider" id="slider"></div>
                   <label class="visually-hidden" for="min-value">Минимальная.</label>
                   <label class="visually-hidden" for="max-value">Максимальная.</label>
-                  <input class="price-slider__nouislider-input-min" type="number" id="min-value" placeholder="0" name="min-value-control">
-                  <input class="price-slider__nouislider-input-max" type="number" id="max-value" placeholder="900" name="max-value-control">
+                  <input class="price-slider__nouislider-input price-slider__nouislider-input--min" type="number" id="min-value" placeholder="0" name="min-value-control">
+                  <input class="price-slider__nouislider-input price-slider__nouislider-input--max" type="number" id="max-value" placeholder="900" name="max-value-control">
                 </div>
-                <ul class="catalog-filter__type-radio type-radio">
-                  <li class="type-radio__radio-item radio-item">
-                    <input class="radio-item__radio-button radio-item__radio-button--active" type="radio" name="milk-type" id="any" checked>
-                    <label class="radio-item__radio-label" for="any">Неважно</label>
-                  </li>
-                  <li class="type-radio__radio-item radio-item">
-                    <input class="radio-item__radio-button" type="radio" name="milk-type" id="animal">
-                    <label class="radio-item__radio-label" for="animal">Только животное</label>
-                  </li>
-                  <li class="type-radio__radio-item radio-item">
-                    <input class="radio-item__radio-button" type="radio" name="milk-type" id="plant">
-                    <label class="radio-item__radio-label" for="plant">Только растительное</label>
-                  </li>
-                  <li class="type-radio__radio-item radio-item">
-                    <input class="radio-item__radio-button" type="radio" name="milk-type" id="without" disabled>
-                    <label class="radio-item__radio-label" for="without">Без молока</label>
-                  </li>
-                </ul>
-                <ul class="catalog-filter__origin-checkboxes origin-checkboxes">
-                  <li class="origin-checkboxes__checkbox-item checkbox-item">
-                    <input class="checkbox-item__checkbox-button checkbox-item__checkbox-button--active" type="checkbox" name="brasil" id="brasil" checked>
-                    <label class="checkbox-item__checkbox-labes" for="brasil">Бразилия</label>
-                  </li>
-                  <li class="origin-checkboxes__checkbox-item checkbox-item">
-                    <input class="checkbox-item__checkbox-button" type="checkbox" name="ethiopia" id="ethiopia" checked>
-                    <label class="checkbox-item__checkbox-labes" for="ethiopia">Эфиопия</label>
-                  </li>
-                  <li class="origin-checkboxes__checkbox-item checkbox-item">
-                    <input class="checkbox-item__checkbox-button" type="checkbox" name="colombia" id="colombia" checked>
-                    <label class="checkbox-item__checkbox-labes" for="colombia">Колумбия</label>
-                  </li>
-                  <li class="origin-checkboxes__checkbox-item checkbox-item">
-                    <input class="checkbox-item__checkbox-button" type="checkbox" name="costa-rica" id="costa-rica" checked>
-                    <label class="checkbox-item__checkbox-labes" for="costa-rica">Коста-Рика</label>
-                  </li>
-                  <li class="origin-checkboxes__checkbox-item checkbox-item">
-                    <input class="checkbox-item__checkbox-button" type="checkbox" name="peru" id="peru" checked>
-                    <label class="checkbox-item__checkbox-labes" for="peru">Перу</label>
-                  </li>
-                </ul>
+                <div class="catalog-filter__type-radio type-radio">
+                  <p class="type-radio__type-radio-form-title form-title">Наличие молока</p>
+                  <ul class="catalog-filter__type-radio-list type-radio-list catalog-filter__list">
+                    <li class="type-radio__radio-item radio-item">
+                      <input class="radio-item__radio-button radio-item__radio-button--active" type="radio" name="milk-type" id="any" checked>
+                      <label class="radio-item__radio-label" for="any">Неважно</label>
+                    </li>
+                    <li class="type-radio__radio-item radio-item">
+                      <input class="radio-item__radio-button" type="radio" name="milk-type" id="animal">
+                      <label class="radio-item__radio-label" for="animal">Только животное</label>
+                    </li>
+                    <li class="type-radio__radio-item radio-item">
+                      <input class="radio-item__radio-button" type="radio" name="milk-type" id="plant">
+                      <label class="radio-item__radio-label" for="plant">Только растительное</label>
+                    </li>
+                    <li class="type-radio__radio-item radio-item">
+                      <input class="radio-item__radio-button" type="radio" name="milk-type" id="without" disabled>
+                      <label class="radio-item__radio-label" for="without">Без молока</label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="catalog-filter__origin-checkboxes origin-checkboxes">
+                  <p class="origin-checkboxes__origin-checkboxes-title form-title">Страна произрастания</p>
+                  <ul class="origin-checkboxes__origin-checkboxes-list">
+                    <li class="origin-checkboxes__checkbox-item checkbox-item">
+                      <input class="checkbox-item__checkbox-button checkbox-item__checkbox-button--active" type="checkbox" name="brasil" id="brasil" checked>
+                      <label class="checkbox-item__checkbox-labes" for="brasil">Бразилия</label>
+                    </li>
+                    <li class="origin-checkboxes__checkbox-item checkbox-item">
+                      <input class="checkbox-item__checkbox-button" type="checkbox" name="ethiopia" id="ethiopia" checked>
+                      <label class="checkbox-item__checkbox-labes" for="ethiopia">Эфиопия</label>
+                    </li>
+                    <li class="origin-checkboxes__checkbox-item checkbox-item">
+                      <input class="checkbox-item__checkbox-button" type="checkbox" name="colombia" id="colombia" checked>
+                      <label class="checkbox-item__checkbox-labes" for="colombia">Колумбия</label>
+                    </li>
+                    <li class="origin-checkboxes__checkbox-item checkbox-item">
+                      <input class="checkbox-item__checkbox-button" type="checkbox" name="costa-rica" id="costa-rica" checked>
+                      <label class="checkbox-item__checkbox-labes" for="costa-rica">Коста-Рика</label>
+                    </li>
+                    <li class="origin-checkboxes__checkbox-item checkbox-item">
+                      <input class="checkbox-item__checkbox-button" type="checkbox" name="peru" id="peru" checked>
+                      <label class="checkbox-item__checkbox-labes" for="peru">Перу</label>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="catalog-filter__filter-controls filter-controls">
                 <div class="filter-controls__filter-controls-wrapper">
-                  <button type="button" class="filter-controls__filter-controls-button button button--primary">Применить</button>
-                  <button type="reset" class="filter-controls__filter-controls-button button button--secondary">Сбросить</button>
+                  <button class="filter-controls__filter-controls-button button button--primary" type="button">Применить</button>
+                  <button class="filter-controls__filter-controls-button button button--secondary" type="reset">Сбросить</button>
                 </div>
                 <div class="filter-controls__filter-select-wrapper filter-select">
                   <p class="filter-select__filter-select-label">Сортировка:</p>
-                  <select name="sort" id="sort">
+                  <select class="filter-select__select-field" name="sort" id="sort">
                     <option value="default" selected>по умолчанию</option>
                   </select>
                 </div>
               </div>
             </form>
-            <div class="catalog__catalog-items catalog-items"></div>
+            <ul class="catalog__catalog-items catalog-items">
+              <li class="catalog-items__catalog-product catalog-product">
+                <div class="catalog-product__catalog-product-image-wrapper">
+                  <picture>
+                    <source media="(min-width: 320px)" srcset="images/catalog/product-1@1x.webp 1x, images/catalog/product-1@2x.webp 2x" type="image/webp" width="130" height="188">
+                    <img class="catalog-product__catalog-product-image" src="images/catalog/product-1@1x.png" srcset="images/catalog/product-1@2x.png 2x" width="130" height="188" alt="Наш уникальный коффе.">
+                  </picture>
+                </div>
+                <div class="catalog-product__catalog-product-content-wrapper">
+                  <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                    с натуральным фермерским молоком</p>
+                </div>
+                <div class="catalog-product__catalog-product-buy-wrapper">
+                  <span class="catalog-product__catalog-product-price price">225₽</span>
+                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                    <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./icons/stack.svg#cart-plus-icon"></use>
+                    </svg>
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </li>
+              <li class="catalog-items__catalog-product catalog-product">
+                <div class="catalog-product__catalog-product-image-wrapper">
+                  <picture>
+                    <source media="(min-width: 320px)" srcset="images/catalog/product-2@1x.webp 1x, images/catalog/product-2@2x.webp 2x" type="image/webp" width="130" height="188">
+                    <img class="catalog-product__catalog-product-image" src="images/catalog/product-2@1x.png" srcset="images/catalog/product-2@2x.png 2x" width="130" height="188" alt="Наш уникальный коффе.">
+                  </picture>
+                </div>
+                <div class="catalog-product__catalog-product-content-wrapper">
+                  <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                    с натуральным фермерским молоком</p>
+                </div>
+                <div class="catalog-product__catalog-product-buy-wrapper">
+                  <span class="catalog-product__catalog-product-price price">225₽</span>
+                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                    <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./icons/stack.svg#cart-plus-icon"></use>
+                    </svg>
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </li>
+              <li class="catalog-items__catalog-product catalog-product">
+                <div class="catalog-product__catalog-product-image-wrapper">
+                  <picture>
+                    <source media="(min-width: 320px)" srcset="images/catalog/product-3@1x.webp 1x, images/catalog/product-3@2x.webp 2x" type="image/webp" width="130" height="188">
+                    <img class="catalog-product__catalog-product-image" src="images/catalog/product-3@1x.png" srcset="images/catalog/product-3@2x.png 2x" width="130" height="188" alt="Наш уникальный коффе.">
+                  </picture>
+                </div>
+                <div class="catalog-product__catalog-product-content-wrapper">
+                  <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                    с натуральным фермерским молоком</p>
+                </div>
+                <div class="catalog-product__catalog-product-buy-wrapper">
+                  <span class="catalog-product__catalog-product-price price">225₽</span>
+                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                    <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./icons/stack.svg#cart-plus-icon"></use>
+                    </svg>
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </li>
+              <li class="catalog-items__catalog-product catalog-product">
+                <div class="catalog-product__catalog-product-image-wrapper">
+                  <picture>
+                    <source media="(min-width: 320px)" srcset="images/catalog/product-4@1x.webp 1x, images/catalog/product-4@2x.webp 2x" type="image/webp" width="130" height="188">
+                    <img class="catalog-product__catalog-product-image" src="images/catalog/product-4@1x.png" srcset="images/catalog/product-4@2x.png 2x" width="130" height="188" alt="Наш уникальный коффе.">
+                  </picture>
+                </div>
+                <div class="catalog-product__catalog-product-content-wrapper">
+                  <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                    с натуральным фермерским молоком</p>
+                </div>
+                <div class="catalog-product__catalog-product-buy-wrapper">
+                  <span class="catalog-product__catalog-product-price price">225₽</span>
+                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                    <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./icons/stack.svg#cart-plus-icon"></use>
+                    </svg>
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </li>
+              <li class="catalog-items__catalog-product catalog-product">
+                <div class="catalog-product__catalog-product-image-wrapper">
+                  <picture>
+                    <source media="(min-width: 320px)" srcset="images/catalog/product-5@1x.webp 1x, images/catalog/product-5@2x.webp 2x" type="image/webp" width="130" height="188">
+                    <img class="catalog-product__catalog-product-image" src="images/catalog/product-5@1x.png" srcset="images/catalog/product-5@2x.png 2x" width="130" height="188" alt="Наш уникальный коффе.">
+                  </picture>
+                </div>
+                <div class="catalog-product__catalog-product-content-wrapper">
+                  <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                    с натуральным фермерским молоком</p>
+                </div>
+                <div class="catalog-product__catalog-product-buy-wrapper">
+                  <span class="catalog-product__catalog-product-price price">225₽</span>
+                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                    <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./icons/stack.svg#cart-plus-icon"></use>
+                    </svg>
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </li>
+              <li class="catalog-items__catalog-product catalog-product">
+                <div class="catalog-product__catalog-product-image-wrapper">
+                  <picture>
+                    <source media="(min-width: 320px)" srcset="images/catalog/product-6@1x.webp 1x, images/catalog/product-6@2x.webp 2x" type="image/webp" width="130" height="188">
+                    <img class="catalog-product__catalog-product-image" src="images/catalog/product-6@1x.png" srcset="images/catalog/product-6@2x.png 2x" width="130" height="188" alt="Наш уникальный коффе.">
+                  </picture>
+                </div>
+                <div class="catalog-product__catalog-product-content-wrapper">
+                  <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                    с натуральным фермерским молоком</p>
+                </div>
+                <div class="catalog-product__catalog-product-buy-wrapper">
+                  <span class="catalog-product__catalog-product-price price">225₽</span>
+                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                    <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./icons/stack.svg#cart-plus-icon"></use>
+                    </svg>
+                    <span>
+                      В корзину
+                    </span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <ul class="catalog__pagination pagination">
+              <li class="pagination__pagination-item">
+                <button class="pagination__pagination-button pagination-button" type="button">
+                  <span class="pagination-button__pagination-text pagination-button__pagination-text--direction ">
+                    Назад
+                  </span>
+                  <svg class="pagination-button__pagination-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use href="./icons/stack.svg#pagination-left-icon"></use>
+                  </svg>
+                </button>
+              </li>
+              <li class="pagination__pagination-item">
+                <button class="pagination__pagination-button pagination-button" type="button">
+                  <span class="pagination-button__pagination-text pagination-button__pagination-text">
+                    1
+                  </span>
+                </button>
+              </li>
+              <li class="pagination__pagination-item">
+                <button class="pagination__pagination-button pagination-button pagination-button--active" type="button">
+                  <span class="pagination-button__pagination-text pagination-button__pagination-text">
+                    2
+                  </span>
+                </button>
+              </li>
+              <li class="pagination__pagination-item">
+                <button class="pagination__pagination-button pagination-button" type="button">
+                  <span class="pagination-button__pagination-text pagination-button__pagination-text">
+                    3
+                  </span>
+                </button>
+              </li>
+              <li class="pagination__pagination-item">
+                <button class="pagination__pagination-button pagination-button" type="button">
+                  <span class="pagination-button__pagination-text pagination-button__pagination-text--direction ">
+                    Вперёд
+                  </span>
+                  <svg class="pagination-button__pagination-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use href="./icons/stack.svg#pagination-right-icon"></use>
+                  </svg>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -321,7 +515,7 @@
         <h2 class="visually-hidden">Наш адрес на карте.</h2>
         <div class="container container--100vw">
           <div class="map__map-wrapper">
-            <div class="map__map-picture-wrapper">
+            <div class="map__map-image-wrapper">
               <picture>
                 <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" width="1440" height="540" type="image/webp">
                 <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x" width="1440" height="540" type="image/png">
@@ -343,7 +537,7 @@
               <div class="footer-logo__footer-logo-image-wrapper">
                 <a class="footer-logo__logo-link" href="#">
                   <picture>
-                    <source media="(min-width: 768px)" srcset="./images/logo-desktop.svg" width="170" height="36" type="image/svg">
+                    <source media="(min-width: 768px)" srcset="./images/logo-desktop.svg" width="170" height="36" type="image/svg+xml">
                     <img class="footer-logo__logo-image" src="./images/logo-tablet.svg" width="82" height="36" alt="Логотип компании.">
                   </picture>
                 </a>
