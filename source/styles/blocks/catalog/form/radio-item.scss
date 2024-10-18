@@ -6,10 +6,8 @@
   font-size: 16px;
   line-height: 24px;
   font-family: inherit;
-}
-
-.radio-item__radio-button {
   position: relative;
+  min-height: 24px;
 
   &::before {
     position: absolute;
@@ -19,8 +17,10 @@
     border-radius: 50%;
     background-color: $base-white;
     border: solid 2px $base-grey;
-    top: 60%;
+    top: 50%;
+    left: -36px;
     transform: translateY(-50%);
+    transition: border $smooth 0.3s;
   }
 
   &::after {
@@ -30,17 +30,21 @@
     height: 16px;
     border-radius: 50%;
     background-color: $base-primary;
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
-    left: 4px;
+    left: -32px;
     opacity: 0;
     transition: opacity $smooth 0.3s;
   }
-
 }
 
-.radio-item__radio-button:checked {
+.radio-item__radio-button:checked ~ .radio-item__radio-label {
   &::after {
     opacity: 1;
+  }
+
+  &::before {
+    // background-color: $base-primary;
+    border-color: $base-primary;
   }
 }

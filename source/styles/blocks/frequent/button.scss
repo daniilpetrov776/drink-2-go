@@ -27,6 +27,11 @@
     transition: background $smooth 0.3s;
   }
 
+  &--secondary {
+    background-color: $base-white;
+    color: $base-primary;
+  }
+
   &--small {
     min-width: 113px;
   }

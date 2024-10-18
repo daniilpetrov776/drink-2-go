@@ -16,6 +16,29 @@
 .price-slider__nouislider-input {
   width: 118px;
   height: 40px;
-  border: solid 2px $base-primary;
+  border: solid 2px $primary-lighter;
   border-radius: 4px;
+
+  &::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    appearance: none;
+  }
+}
+
+.price-slider__slider-wrapper {
+  height: 24px;
+  margin: 20px 0 24px;
+  // width: 263px;
+  width: 100%;
+}
+
+.price-slider__nouislider {
+  height: 2px;
+  background-color: $light-grey;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 0 0 0 7px;
+  // width: 263px;
+  width: 100%;
 }

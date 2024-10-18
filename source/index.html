@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
+    <link href="./vendor/nouislider/nouislider.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="./vendor/nouislider/nouislider.js" async></script>
     <script type="module" src="scripts/index.js" async></script>
   </head>
   <body class="page__body">
@@ -253,7 +255,9 @@
               <div class="catalog-filter__catalof-filter-wrapper">
                 <div class="catalog-filter__price-slider price-slider">
                   <p class="price-slider__form-title form-title">Цена</p>
-                  <div class="price-slider__nouislider" id="slider"></div>
+                  <div class="price-slider__slider-wrapper">
+                    <div class="price-slider__nouislider" id="slider"></div>
+                  </div>
                   <label class="visually-hidden" for="min-value">Минимальная.</label>
                   <label class="visually-hidden" for="max-value">Максимальная.</label>
                   <div class="price-slider__controls-wrapper">
@@ -286,24 +290,24 @@
                   <p class="origin-checkboxes__origin-checkboxes-title form-title">Страна произрастания</p>
                   <ul class="origin-checkboxes__origin-checkboxes-list">
                     <li class="origin-checkboxes__checkbox-item checkbox-item">
-                      <input class="checkbox-item__checkbox-button checkbox-item__checkbox-button--active" type="checkbox" name="brasil" id="brasil" checked>
-                      <label class="checkbox-item__checkbox-labes" for="brasil">Бразилия</label>
+                      <input class="checkbox-item__checkbox-button visually-hidden checkbox-item__checkbox-button--active" type="checkbox" name="brasil" id="brasil" checked>
+                      <label class="checkbox-item__checkbox-label" for="brasil">Бразилия</label>
                     </li>
                     <li class="origin-checkboxes__checkbox-item checkbox-item">
-                      <input class="checkbox-item__checkbox-button" type="checkbox" name="ethiopia" id="ethiopia" checked>
-                      <label class="checkbox-item__checkbox-labes" for="ethiopia">Эфиопия</label>
+                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" name="ethiopia" id="ethiopia">
+                      <label class="checkbox-item__checkbox-label" for="ethiopia">Эфиопия</label>
                     </li>
                     <li class="origin-checkboxes__checkbox-item checkbox-item">
-                      <input class="checkbox-item__checkbox-button" type="checkbox" name="colombia" id="colombia" checked>
-                      <label class="checkbox-item__checkbox-labes" for="colombia">Колумбия</label>
+                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" name="colombia" id="colombia">
+                      <label class="checkbox-item__checkbox-label" for="colombia">Колумбия</label>
                     </li>
                     <li class="origin-checkboxes__checkbox-item checkbox-item">
-                      <input class="checkbox-item__checkbox-button" type="checkbox" name="costa-rica" id="costa-rica" checked>
-                      <label class="checkbox-item__checkbox-labes" for="costa-rica">Коста-Рика</label>
+                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" name="costa-rica" id="costa-rica">
+                      <label class="checkbox-item__checkbox-label" for="costa-rica">Коста-Рика</label>
                     </li>
                     <li class="origin-checkboxes__checkbox-item checkbox-item">
-                      <input class="checkbox-item__checkbox-button" type="checkbox" name="peru" id="peru" checked>
-                      <label class="checkbox-item__checkbox-labes" for="peru">Перу</label>
+                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" name="peru" id="peru" disabled>
+                      <label class="checkbox-item__checkbox-label" for="peru">Перу</label>
                     </li>
                   </ul>
                 </div>
