@@ -1,0 +1,14 @@
+.filter-controls__filter-controls-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.filter-controls__filter-select-wrapper {
+  margin: 36px 0 16px;
+}
+
+.filter-controls__filter-controls-button {
+  width: 100%;
+}

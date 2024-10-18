@@ -256,26 +256,28 @@
                   <div class="price-slider__nouislider" id="slider"></div>
                   <label class="visually-hidden" for="min-value">Минимальная.</label>
                   <label class="visually-hidden" for="max-value">Максимальная.</label>
-                  <input class="price-slider__nouislider-input price-slider__nouislider-input--min" type="number" id="min-value" placeholder="0" name="min-value-control">
-                  <input class="price-slider__nouislider-input price-slider__nouislider-input--max" type="number" id="max-value" placeholder="900" name="max-value-control">
+                  <div class="price-slider__controls-wrapper">
+                    <input class="price-slider__nouislider-input price-slider__nouislider-input--min" type="number" id="min-value" placeholder="0" name="min-value-control">
+                    <input class="price-slider__nouislider-input price-slider__nouislider-input--max" type="number" id="max-value" placeholder="900" value="900" name="max-value-control">
+                  </div>
                 </div>
                 <div class="catalog-filter__type-radio type-radio">
                   <p class="type-radio__type-radio-form-title form-title">Наличие молока</p>
                   <ul class="catalog-filter__type-radio-list type-radio-list catalog-filter__list">
                     <li class="type-radio__radio-item radio-item">
-                      <input class="radio-item__radio-button radio-item__radio-button--active" type="radio" name="milk-type" id="any" checked>
+                      <input class="radio-item__radio-button radio-item__radio-button--active visually-hidden" type="radio" name="milk-type" id="any" checked>
                       <label class="radio-item__radio-label" for="any">Неважно</label>
                     </li>
                     <li class="type-radio__radio-item radio-item">
-                      <input class="radio-item__radio-button" type="radio" name="milk-type" id="animal">
+                      <input class="radio-item__radio-button visually-hidden" type="radio" name="milk-type" id="animal">
                       <label class="radio-item__radio-label" for="animal">Только животное</label>
                     </li>
                     <li class="type-radio__radio-item radio-item">
-                      <input class="radio-item__radio-button" type="radio" name="milk-type" id="plant">
+                      <input class="radio-item__radio-button visually-hidden" type="radio" name="milk-type" id="plant">
                       <label class="radio-item__radio-label" for="plant">Только растительное</label>
                     </li>
                     <li class="type-radio__radio-item radio-item">
-                      <input class="radio-item__radio-button" type="radio" name="milk-type" id="without" disabled>
+                      <input class="radio-item__radio-button visually-hidden" type="radio" name="milk-type" id="without" disabled>
                       <label class="radio-item__radio-label" for="without">Без молока</label>
                     </li>
                   </ul>
@@ -313,9 +315,14 @@
                 </div>
                 <div class="filter-controls__filter-select-wrapper filter-select">
                   <p class="filter-select__filter-select-label">Сортировка:</p>
-                  <select class="filter-select__select-field" name="sort" id="sort">
-                    <option value="default" selected>по умолчанию</option>
-                  </select>
+                  <div class="filter-select__select-wrapper">
+                    <select class="filter-select__select-field" name="sort" id="sort">
+                      <option value="default" selected>по умолчанию</option>
+                    </select>
+                    <svg class="filter-select__select-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./icons/stack.svg#arrow-down-icon"></use>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </form>
