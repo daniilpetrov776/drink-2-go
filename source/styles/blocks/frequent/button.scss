@@ -41,6 +41,7 @@
       background-color: $primary-lighter;
       color: $base-white;
     }
+
     &:active {
       background-color: $primary-darker;
       color: $base-white;
@@ -61,16 +62,4 @@
     font-size: 14px;
     line-height: 20px;
   }
-}
-
-@media #{$mobile-only} {
-
-}
-
-@media #{$not-mobile} {
-
-}
-
-@media #{$desktop-only} {
-
 }

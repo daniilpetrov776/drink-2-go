@@ -1,5 +1,5 @@
 const slider = document.querySelector('.slider__slides-wrapper');
-const slides = Array.from(slider.children);
+const slides = document.querySelectorAll('.slide');
 const prevButton = document.querySelector('.slider-button--prev');
 const nextButton = document.querySelector('.slider-button--next');
 
@@ -57,7 +57,7 @@ nextButton.addEventListener('click', () => {
   }
 });
 
-const upadetHandlers = () => {
+const upadateHandlers = () => {
   const paginationButtons = document.querySelectorAll('.slider__slider-pagination-button');
 
   paginationButtons.forEach((button, index) => {
@@ -67,6 +67,7 @@ const upadetHandlers = () => {
     });
   });
 };
+upadateHandlers();
 
 // автоматически добавляет нужное количество кнопок пагинации в зависимости от количества слайдов
 export const createPaginationButtons = () => {
@@ -82,6 +83,6 @@ export const createPaginationButtons = () => {
     }
 
     paginationContainer.appendChild(button);
-    upadetHandlers();
+    upadateHandlers();
   });
 };

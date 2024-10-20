@@ -1,11 +1,3 @@
-.price-slider__nouislider-input {
-  font-family: inherit;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-  text-align: center;
-}
-
 .price-slider__controls-wrapper {
   display: flex;
   flex-flow: wrap;
@@ -14,6 +6,11 @@
 }
 
 .price-slider__nouislider-input {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-align: center;
   width: 118px;
   height: 40px;
   border: solid 2px $primary-lighter;
@@ -21,7 +18,7 @@
   transition: border 0.3s $smooth;
 
   &::-webkit-inner-spin-button,
-  input[type=number]::-webkit-outer-spin-button {
+  input[type="number"]::-webkit-outer-spin-button {
     appearance: none;
   }
 
@@ -33,7 +30,7 @@
   &:disabled {
     border-color: $light-grey;
     background-color: $lightest-grey;
-    color: $base-grey
+    color: $base-grey;
   }
 
   ::placeholder {
@@ -63,7 +60,7 @@
     width: 223px;
   }
 
-  .price-slider__controls-wrapper  {
+  .price-slider__controls-wrapper {
     gap: 47px;
   }
 }
@@ -73,7 +70,7 @@
     width: 318px;
   }
 
-  .price-slider__controls-wrapper  {
+  .price-slider__controls-wrapper {
     gap: 50px;
   }
 }

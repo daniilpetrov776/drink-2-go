@@ -17,16 +17,8 @@
   position: relative;
 }
 
-@media #{$mobile-only} {
-
-}
-
 @media #{$not-mobile} {
   .header {
     min-height: 80px;
   }
-}
-
-@media #{$desktop-only} {
-
 }

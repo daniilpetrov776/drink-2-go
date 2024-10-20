@@ -27,7 +27,8 @@
   background-color: transparent;
   transition: background 0.3s $smooth;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $base-secondary;
   }
 

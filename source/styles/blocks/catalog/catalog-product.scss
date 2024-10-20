@@ -10,6 +10,7 @@
 .catalog-product__catalog-product-description {
   font-size: 14px;
   line-height: 20px;
+  margin: 0 0 18px;
 }
 
 .catalog-product__catalog-product-image-wrapper {
@@ -22,15 +23,11 @@
   margin: 0 0 4px;
 }
 
-.catalog-product__catalog-product-description {
-  margin: 0 0 18px;
-}
-
 .catalog-product__catalog-product-buy-wrapper {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  gap: 49px;
+  gap: 20px;
 }
 
 .catalog-product__catalog-button {
@@ -44,7 +41,7 @@
 @media #{$not-mobile} {
   .catalog-product {
     width: 349px;
-    padding: 50px 30px 30px 30px;
+    padding: 50px 30px 30px;
   }
 
   .catalog-product__catalog-product-buy-wrapper {

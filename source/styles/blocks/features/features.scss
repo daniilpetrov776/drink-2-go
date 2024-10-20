@@ -26,10 +26,6 @@
   margin: 0;
 }
 
-@media #{$mobile-only} {
-
-}
-
 @media #{$not-mobile} {
   .features__features-content-list {
     padding: 0 10px 100px;
@@ -42,10 +38,6 @@
   .features__features-section-title {
     margin: 4px 0 60px;
   }
-}
-
-@media #{$tablet-only} {
-
 }
 
 @media #{$desktop-only} {

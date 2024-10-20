@@ -3,9 +3,19 @@
 }
 
 .radio-item__radio-button {
-  &:disabled + .radio-item__radio-label{
+  &:disabled + .radio-item__radio-label {
     cursor: auto;
     color: $base-grey;
+  }
+
+  &:focus-visible ~ .radio-item__radio-label {
+    &::after {
+      opacity: 0.25;
+    }
+
+    &::before {
+      border: solid 2px $primary-lighter;
+    }
   }
 }
 
@@ -45,14 +55,15 @@
     transition: opacity $smooth 0.3s;
   }
 
-  &:hover::after, &:focus-visible::after {
+  &:hover::after,
+  &:focus-visible::after {
     opacity: 0.25;
   }
 
-  &:hover::before, &:focus-visible::before {
+  &:hover::before,
+  &:focus-visible::before {
     border: solid 2px $primary-lighter;
   }
-
 }
 
 .radio-item__radio-button:checked ~ .radio-item__radio-label {

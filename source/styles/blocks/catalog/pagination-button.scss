@@ -16,7 +16,8 @@
     font-weight: 600;
   }
 
-  &:hover, &:focus-visible {
+  &:hover,
+  &:focus-visible {
     background-color: $primary-lighter;
     color: $base-white;
   }
@@ -26,7 +27,8 @@
     color: $base-white;
   }
 
-  &:disabled, &:disabled .pagination-button__pagination-arrow {
+  &:disabled,
+  &:disabled .pagination-button__pagination-arrow {
     background-color: $light-grey;
     color: $base-white;
   }
@@ -44,6 +46,7 @@
       display: block;
     }
   }
+
   .pagination-button__pagination-arrow {
     display: none;
   }

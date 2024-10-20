@@ -24,10 +24,6 @@
   transition: color $smooth 0.3s;
 }
 
-@media #{$mobile-only} {
-
-}
-
 @media #{$not-mobile} {
   .made-by__made-by-link {
     &:active {

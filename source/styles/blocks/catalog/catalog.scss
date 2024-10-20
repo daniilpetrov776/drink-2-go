@@ -6,7 +6,7 @@
   padding: 50px 0 44px;
 }
 
-.catalog__catalog-text-title  {
+.catalog__catalog-text-title {
   margin: 0;
 }
 
@@ -14,12 +14,12 @@
   text-align: center;
 }
 
-.catalog__catalog-section-title  {
+.catalog__catalog-section-title {
   margin: 4px 0 20px;
 }
 
 .catalog__pagination {
-  margin: 40px 0 0 0;
+  margin: 40px 0 0;
 }
 
 @media #{$not-mobile} {
@@ -28,16 +28,17 @@
   }
 
   .catalog__pagination {
-    margin: 70px 0 0 0;
+    margin: 70px 0 0;
   }
 }
+
 @media #{$desktop-only} {
   .catalog__catalog-wrapper {
     display: grid;
     grid-template-columns: 318px 1fr;
     column-gap: 30px;
     position: relative;
-    padding: 100px 0 120px 0;
+    padding: 100px 0 120px;
   }
 
   .catalog__catalog-header {
@@ -57,6 +58,6 @@
   }
 
   .catalog__catalog-section-title {
-    margin: 4px 0 40px
+    margin: 4px 0 40px;
   }
 }

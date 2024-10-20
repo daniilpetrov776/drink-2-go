@@ -8,8 +8,8 @@
     <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
     <link href="./vendor/nouislider/nouislider.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-    <script type="module" src="./vendor/nouislider/nouislider.js" async></script>
-    <script type="module" src="scripts/index.js" async></script>
+    <script src="./vendor/nouislider/nouislider.js" defer></script>
+    <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="header" data-test="header">
@@ -261,7 +261,7 @@
                   <label class="visually-hidden" for="min-value">Минимальная.</label>
                   <label class="visually-hidden" for="max-value">Максимальная.</label>
                   <div class="price-slider__controls-wrapper">
-                    <input class="price-slider__nouislider-input price-slider__nouislider-input--min" type="number" id="min-value" placeholder="0" value="0" name="min-value-control">
+                    <input class="price-slider__nouislider-input price-slider__nouislider-input--min" type="number" id="min-value" placeholder="0" name="min-value-control">
                     <input class="price-slider__nouislider-input price-slider__nouislider-input--max" type="number" id="max-value" placeholder="900" value="900" name="max-value-control">
                   </div>
                 </div>
@@ -322,6 +322,8 @@
                   <div class="filter-select__select-wrapper">
                     <select class="filter-select__select-field" name="sort" id="sort">
                       <option value="default" selected>по умолчанию</option>
+                      <option value="default">сначала дорогие</option>
+                      <option value="default">сначала дешевые</option>
                     </select>
                     <svg class="filter-select__select-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#arrow-down-icon"></use>
@@ -345,7 +347,7 @@
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -369,7 +371,7 @@
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -393,7 +395,7 @@
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -417,7 +419,7 @@
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -441,7 +443,7 @@
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -465,7 +467,7 @@
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -489,21 +491,21 @@
               </li>
               <li class="pagination__pagination-item">
                 <button class="pagination__pagination-button pagination-button pagination-button--number" type="button">
-                  <span class="pagination-button__pagination-text pagination-button__pagination-text">
+                  <span class="pagination-button__pagination-text">
                     1
                   </span>
                 </button>
               </li>
               <li class="pagination__pagination-item">
                 <button class="pagination__pagination-button pagination-button pagination-button--active pagination-button--number" type="button">
-                  <span class="pagination-button__pagination-text pagination-button__pagination-text">
+                  <span class="pagination-button__pagination-text">
                     2
                   </span>
                 </button>
               </li>
               <li class="pagination__pagination-item">
                 <button class="pagination__pagination-button pagination-button pagination-button--number" type="button">
-                  <span class="pagination-button__pagination-text pagination-button__pagination-text ">
+                  <span class="pagination-button__pagination-text">
                     3
                   </span>
                 </button>
@@ -528,17 +530,12 @@
           <div class="map__map-wrapper">
             <div class="map__map-image-wrapper">
               <picture>
-                <!-- <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" width="1440" height="540" type="image/webp">
-                <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x" width="1440" height="540" type="image/png">
-                <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.webp 1x, images/map/map-tablet@2x.webp 2x" width="768" height="480" type="image/webp">
-                <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x" width="768" height="480" type="image/png">
-                <source media="(min-width: 320px)" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x" type="image/webp" width="320" height="420"> -->
-
                 <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" type="image/webp" width="1440" height="540">
+                <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x" type="image/png" width="1440" height="540">
                 <source media="(min-width: 768px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" type="image/webp" width="768" height="480">
+                <source media="(min-width: 768px)" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x" type="image/png" width="768" height="480">
                 <source media="(min-width: 320px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" type="image/webp" width="320" height="420">
 
-                <!-- <img class="map__map-image" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" width="320" height="420" alt="Наш адрес на карте."> -->
                 <img class="map__map-image" src="images/map/map-desktop@1x.png" srcset="images/map/map-desktop@2x.png 2x" width="320" height="420" alt="Наш адрес на карте.">
               </picture>
             </div>
