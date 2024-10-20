@@ -4,12 +4,31 @@
   color: $base-primary;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 600;
+  font-weight: 400;
   border-radius: 4px;
+  transition: background $smooth 0.3s, color $smooth 0.3s;
+  cursor: pointer;
 
   &--active {
     color: $base-black;
     background-color: transparent;
+    pointer-events: none;
+    font-weight: 600;
+  }
+
+  &:hover, &:focus-visible {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:disabled, &:disabled .pagination-button__pagination-arrow {
+    background-color: $light-grey;
+    color: $base-white;
   }
 }
 
@@ -24,5 +43,8 @@
     &--direction {
       display: block;
     }
+  }
+  .pagination-button__pagination-arrow {
+    display: none;
   }
 }

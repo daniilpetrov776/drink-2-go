@@ -25,20 +25,22 @@ const updateBackground = () => {
 };
 
 export const updateSlider = () => {
-  const slideWidth = slides[0].getBoundingClientRect().width;
-  slides.forEach((slide) => {
-    slide.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-  });
+  if (slider) {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    slides.forEach((slide) => {
+      slide.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    });
 
-  prevButton.disabled = currentIndex === 0;
-  nextButton.disabled = currentIndex === slides.length - 1;
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === slides.length - 1;
 
-  const paginationButtons = document.querySelectorAll('.slider__slider-pagination-button');
+    const paginationButtons = document.querySelectorAll('.slider__slider-pagination-button');
 
-  paginationButtons.forEach((button, index) => {
-    button.classList.toggle('slider__slider-pagination-button--active', index === currentIndex);
-  });
-  updateBackground();
+    paginationButtons.forEach((button, index) => {
+      button.classList.toggle('slider__slider-pagination-button--active', index === currentIndex);
+    });
+    updateBackground();
+  }
 };
 
 prevButton.addEventListener('click', () => {

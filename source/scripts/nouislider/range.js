@@ -1,7 +1,6 @@
 const range = document.querySelector('#slider');
 const inputMin = document.querySelector('.price-slider__nouislider-input--min');
 const inputMax = document.querySelector('.price-slider__nouislider-input--max');
-console.log(inputMin, inputMax)
 
 export const getSliderRange = () => {
   if (range) {
@@ -11,7 +10,7 @@ export const getSliderRange = () => {
       step: 1,
       range: {
         'min': 0,
-        'max': 1100
+        'max': 1000
       },
       cssPrefix: 'noui-',
       margin: 0,

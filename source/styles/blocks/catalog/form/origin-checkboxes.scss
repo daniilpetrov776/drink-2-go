@@ -7,3 +7,9 @@
   justify-content: center;
   gap: 20px;
 }
+
+@media #{$not-mobile} {
+  .origin-checkboxes {
+    width: 223px;
+  }
+}

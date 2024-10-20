@@ -4,9 +4,9 @@
   // padding: 10px 15px;
 }
 
-.footer__footer-wrapper {
-  padding: 20px 0 0;
-}
+// .footer__footer-wrapper {
+//   padding: 20px 0 0;
+// }
 
 .footer__logo-wrapper {
   display: flex;
@@ -42,6 +42,10 @@
 }
 
 @media #{$not-mobile} {
+  .footer__footer-wrapper {
+    padding: 40px 0 0 0;
+  }
+
   .footer__navigation-wrapper {
     display: flex;
     flex-flow: wrap;
@@ -52,6 +56,7 @@
 
   .footer__logo-wrapper {
     align-items: flex-end;
+    min-height: 40px;
   }
 
   .footer__footer-contacts {

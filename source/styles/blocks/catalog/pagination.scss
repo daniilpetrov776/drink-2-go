@@ -15,4 +15,22 @@
 .pagination__pagination-button {
   min-width: 40px;
   height: 40px;
+  padding: 8px;
+}
+
+@media #{$not-mobile} {
+  .pagination {
+    justify-content: flex-end;
+  }
+
+  .pagination__pagination-button {
+    &--wider {
+      padding: 8px 20px;
+      width: 91px;
+    }
+
+    &--even-wider {
+      width: 104px;
+    }
+  }
 }

@@ -1,3 +1,9 @@
 .type-radio__type-radio-form-title {
 
 }
+
+@media #{$not-mobile} {
+  .type-radio {
+    width: 222px;
+  }
+}

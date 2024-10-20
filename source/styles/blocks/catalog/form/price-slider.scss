@@ -18,17 +18,32 @@
   height: 40px;
   border: solid 2px $primary-lighter;
   border-radius: 4px;
+  transition: border 0.3s $smooth;
 
   &::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {
     appearance: none;
+  }
+
+  &:focus {
+    border: solid 2px $primary-darker;
+    outline: none;
+  }
+
+  &:disabled {
+    border-color: $light-grey;
+    background-color: $lightest-grey;
+    color: $base-grey
+  }
+
+  ::placeholder {
+    color: $base-grey;
   }
 }
 
 .price-slider__slider-wrapper {
   height: 24px;
   margin: 20px 0 24px;
-  // width: 263px;
   width: 100%;
 }
 
@@ -39,6 +54,26 @@
   border: none;
   border-radius: 0;
   padding: 0 0 0 7px;
-  // width: 263px;
   width: 100%;
+}
+
+
+@media #{$not-mobile} {
+  .price-slider {
+    width: 223px;
+  }
+
+  .price-slider__controls-wrapper  {
+    gap: 47px;
+  }
+}
+
+@media #{$desktop-only} {
+  .price-slider {
+    width: 318px;
+  }
+
+  .price-slider__controls-wrapper  {
+    gap: 50px;
+  }
 }

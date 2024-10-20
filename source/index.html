@@ -252,7 +252,7 @@
               <h2 class="catalog__catalog-section-title section-title">Каталог кофейных напитков</h2>
             </div>
             <form class="catalog__catalog-filter catalog-filter" method="get" action="https://echo.htmlacademy.ru">
-              <div class="catalog-filter__catalof-filter-wrapper">
+              <div class="catalog-filter__catalog-filter-wrapper">
                 <div class="catalog-filter__price-slider price-slider">
                   <p class="price-slider__form-title form-title">Цена</p>
                   <div class="price-slider__slider-wrapper">
@@ -261,7 +261,7 @@
                   <label class="visually-hidden" for="min-value">Минимальная.</label>
                   <label class="visually-hidden" for="max-value">Максимальная.</label>
                   <div class="price-slider__controls-wrapper">
-                    <input class="price-slider__nouislider-input price-slider__nouislider-input--min" type="number" id="min-value" placeholder="0" name="min-value-control">
+                    <input class="price-slider__nouislider-input price-slider__nouislider-input--min" type="number" id="min-value" placeholder="0" value="0" name="min-value-control">
                     <input class="price-slider__nouislider-input price-slider__nouislider-input--max" type="number" id="max-value" placeholder="900" value="900" name="max-value-control">
                   </div>
                 </div>
@@ -314,8 +314,8 @@
               </div>
               <div class="catalog-filter__filter-controls filter-controls">
                 <div class="filter-controls__filter-controls-wrapper">
-                  <button class="filter-controls__filter-controls-button button button--primary" type="button">Применить</button>
-                  <button class="filter-controls__filter-controls-button button button--secondary" type="reset">Сбросить</button>
+                  <button class="filter-controls__filter-controls-button filter-controls__filter-controls-button--wider button button--primary" type="button">Применить</button>
+                  <button class="filter-controls__filter-controls-button filter-controls__filter-controls-button--narrower button button--secondary" type="reset">Сбросить</button>
                 </div>
                 <div class="filter-controls__filter-select-wrapper filter-select">
                   <p class="filter-select__filter-select-label">Сортировка:</p>
@@ -478,7 +478,7 @@
             </ul>
             <ul class="catalog__pagination pagination">
               <li class="pagination__pagination-item">
-                <button class="pagination__pagination-button pagination-button" type="button">
+                <button class="pagination__pagination-button pagination__pagination-button--wider pagination-button" id="prev-pagination" type="button">
                   <span class="pagination-button__pagination-text pagination-button__pagination-text--direction ">
                     Назад
                   </span>
@@ -488,28 +488,28 @@
                 </button>
               </li>
               <li class="pagination__pagination-item">
-                <button class="pagination__pagination-button pagination-button" type="button">
+                <button class="pagination__pagination-button pagination-button pagination-button--number" type="button">
                   <span class="pagination-button__pagination-text pagination-button__pagination-text">
                     1
                   </span>
                 </button>
               </li>
               <li class="pagination__pagination-item">
-                <button class="pagination__pagination-button pagination-button pagination-button--active" type="button">
+                <button class="pagination__pagination-button pagination-button pagination-button--active pagination-button--number" type="button">
                   <span class="pagination-button__pagination-text pagination-button__pagination-text">
                     2
                   </span>
                 </button>
               </li>
               <li class="pagination__pagination-item">
-                <button class="pagination__pagination-button pagination-button" type="button">
-                  <span class="pagination-button__pagination-text pagination-button__pagination-text">
+                <button class="pagination__pagination-button pagination-button pagination-button--number" type="button">
+                  <span class="pagination-button__pagination-text pagination-button__pagination-text ">
                     3
                   </span>
                 </button>
               </li>
               <li class="pagination__pagination-item">
-                <button class="pagination__pagination-button pagination-button" type="button">
+                <button class="pagination__pagination-button pagination__pagination-button--wider pagination__pagination-button--even-wider pagination-button" id="next-pagination" type="button">
                   <span class="pagination-button__pagination-text pagination-button__pagination-text--direction ">
                     Вперёд
                   </span>
@@ -528,12 +528,18 @@
           <div class="map__map-wrapper">
             <div class="map__map-image-wrapper">
               <picture>
-                <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" width="1440" height="540" type="image/webp">
+                <!-- <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" width="1440" height="540" type="image/webp">
                 <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x" width="1440" height="540" type="image/png">
                 <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.webp 1x, images/map/map-tablet@2x.webp 2x" width="768" height="480" type="image/webp">
                 <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x" width="768" height="480" type="image/png">
-                <source media="(min-width: 320px)" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x" type="image/webp" width="320" height="420">
-                <img class="map__map-image" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" width="320" height="420" alt="Наш адрес на карте.">
+                <source media="(min-width: 320px)" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x" type="image/webp" width="320" height="420"> -->
+
+                <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" type="image/webp" width="1440" height="540">
+                <source media="(min-width: 768px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" type="image/webp" width="768" height="480">
+                <source media="(min-width: 320px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" type="image/webp" width="320" height="420">
+
+                <!-- <img class="map__map-image" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" width="320" height="420" alt="Наш адрес на карте."> -->
+                <img class="map__map-image" src="images/map/map-desktop@1x.png" srcset="images/map/map-desktop@2x.png 2x" width="320" height="420" alt="Наш адрес на карте.">
               </picture>
             </div>
           </div>
