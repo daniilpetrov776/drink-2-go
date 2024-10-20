@@ -10,7 +10,7 @@
 .catalog-product__catalog-product-description {
   font-size: 14px;
   line-height: 20px;
-  margin: 0 0 18px;
+  margin: 0 0 15px;
 }
 
 .catalog-product__catalog-product-image-wrapper {
@@ -21,13 +21,14 @@
 
 .catalog-product__catalog-product-title {
   margin: 0 0 4px;
+  letter-spacing: 0.02em;
 }
 
 .catalog-product__catalog-product-buy-wrapper {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  gap: 20px;
+  gap: 49px;
 }
 
 .catalog-product__catalog-button {
@@ -36,6 +37,7 @@
   flex-flow: row wrap;
   align-items: center;
   gap: 6px;
+  min-height: 36px;
 }
 
 @media #{$not-mobile} {

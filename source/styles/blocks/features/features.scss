@@ -1,16 +1,20 @@
+.features__features-wrapper {
+  padding: 50px 0 0 0;
+}
+
 .features__features-content-list {
   margin: 0;
-  padding: 0;
+  padding: 0 0 60px 0;
   list-style-type: none;
   display: flex;
   flex-flow: column wrap;
   justify-items: center;
-  gap: 32px;
+  gap: 31px;
 }
 
 .features__features-text-title {
   text-align: center;
-  margin: 50px 0 0;
+  margin: 0;
 }
 
 .features__features-section-title {
@@ -20,6 +24,7 @@
 
 .feature__feature-title {
   margin: 10px 0 4px;
+  letter-spacing: 0.02em;
 }
 
 .feature__feature-description {

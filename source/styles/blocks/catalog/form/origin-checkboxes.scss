@@ -8,6 +8,10 @@
   gap: 20px;
 }
 
+.origin-checkboxes__origin-checkboxes-title {
+  margin: 16px 0 17px;
+}
+
 @media #{$not-mobile} {
   .origin-checkboxes {
     width: 223px;

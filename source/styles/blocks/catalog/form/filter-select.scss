@@ -3,6 +3,7 @@
   flex-flow: wrap;
   align-items: center;
   gap: 8px;
+  padding: 0 1px;
 }
 
 .filter-select__filter-select-label {
@@ -19,7 +20,7 @@
   font-weight: 600;
   color: $base-primary;
   font-family: inherit;
-  width: 165px;
+  width: 160px;
   height: 32px;
   padding: 4px 15px 4px 10px;
   border: none;
@@ -45,7 +46,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 10px;
+  right: 3px;
   transition: transform 0.3s $smooth;
 }
 

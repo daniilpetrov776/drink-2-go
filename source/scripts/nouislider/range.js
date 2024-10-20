@@ -10,7 +10,7 @@ export const getSliderRange = () => {
       step: 1,
       range: {
         'min': 0,
-        'max': 1000
+        'max': 980
       },
       cssPrefix: 'noui-',
       margin: 0,

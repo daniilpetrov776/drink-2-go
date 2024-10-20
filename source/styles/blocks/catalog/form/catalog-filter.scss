@@ -9,7 +9,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 15px;
 }
 
 .catalog-filter__list {
@@ -19,7 +19,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 21px;
 }
 
 @media #{$not-mobile} {
