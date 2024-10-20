@@ -1,5 +1,5 @@
 const slider = document.querySelector('.slider__slides-wrapper');
-const slides = Array.from(slider.children);
+const slides = document.querySelectorAll('.slide');
 const prevButton = document.querySelector('.slider-button--prev');
 const nextButton = document.querySelector('.slider-button--next');
 
@@ -25,20 +25,22 @@ const updateBackground = () => {
 };
 
 export const updateSlider = () => {
-  const slideWidth = slides[0].getBoundingClientRect().width;
-  slides.forEach((slide) => {
-    slide.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-  });
+  if (slider) {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    slides.forEach((slide) => {
+      slide.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    });
 
-  prevButton.disabled = currentIndex === 0;
-  nextButton.disabled = currentIndex === slides.length - 1;
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex === slides.length - 1;
 
-  const paginationButtons = document.querySelectorAll('.slider__slider-pagination-button');
+    const paginationButtons = document.querySelectorAll('.slider__slider-pagination-button');
 
-  paginationButtons.forEach((button, index) => {
-    button.classList.toggle('slider__slider-pagination-button--active', index === currentIndex);
-  });
-  updateBackground();
+    paginationButtons.forEach((button, index) => {
+      button.classList.toggle('slider__slider-pagination-button--active', index === currentIndex);
+    });
+    updateBackground();
+  }
 };
 
 prevButton.addEventListener('click', () => {
@@ -55,7 +57,7 @@ nextButton.addEventListener('click', () => {
   }
 });
 
-const upadetHandlers = () => {
+const upadateHandlers = () => {
   const paginationButtons = document.querySelectorAll('.slider__slider-pagination-button');
 
   paginationButtons.forEach((button, index) => {
@@ -65,6 +67,7 @@ const upadetHandlers = () => {
     });
   });
 };
+upadateHandlers();
 
 // автоматически добавляет нужное количество кнопок пагинации в зависимости от количества слайдов
 export const createPaginationButtons = () => {
@@ -80,6 +83,6 @@ export const createPaginationButtons = () => {
     }
 
     paginationContainer.appendChild(button);
-    upadetHandlers();
+    upadateHandlers();
   });
 };

@@ -5,11 +5,11 @@
   gap: 30px;
 }
 
-.catalog-filter__catalof-filter-wrapper {
+.catalog-filter__catalog-filter-wrapper {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 15px;
 }
 
 .catalog-filter__list {
@@ -19,5 +19,25 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 21px;
+}
+
+@media #{$not-mobile} {
+  .catalog-filter {
+    gap: 40px 30px;
+  }
+
+  .catalog-filter__catalog-filter-wrapper {
+    flex-flow: row wrap;
+  }
+}
+
+@media #{$desktop-only} {
+  .catalog-filter {
+    justify-content: flex-start;
+  }
+
+  .catalog-filter__catalog-filter-wrapper {
+    justify-content: flex-start;
+  }
 }

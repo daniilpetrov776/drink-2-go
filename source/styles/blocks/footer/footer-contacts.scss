@@ -51,10 +51,6 @@
   transition: color $smooth 0.3s;
 }
 
-@media #{$mobile-only} {
-
-}
-
 @media #{$not-mobile} {
   .footer-contacts {
     width: 223px;

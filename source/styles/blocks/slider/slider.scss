@@ -3,16 +3,6 @@
   position: relative;
 
   transition: background $smooth 0.5s;
-
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   height: 100%;
-  //   width: 100vw;
-  //   bottom: 0;
-  //   left: calc((100vw - 100%) / -2);
-  //   background-color: $flat-white;
-  // }
 }
 
 .slider__slider-wrapper {
@@ -32,11 +22,6 @@
 .slider__slider-pagination {
   display: none;
 }
-
-@media #{$mobile-only} {
-
-}
-
 
 @media #{$not-mobile} {
   .slider__slider-wrapper {

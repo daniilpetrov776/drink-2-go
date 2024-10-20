@@ -16,10 +16,6 @@
   text-align: center;
 }
 
-@media #{$mobile-only} {
-
-}
-
 @media #{$not-mobile} {
   .features__features-content-list {
     flex-flow: row wrap;
@@ -49,10 +45,6 @@
     line-height: 24px;
     text-align: left;
   }
-}
-
-@media #{$tablet-only} {
-
 }
 
 @media #{$desktop-only} {

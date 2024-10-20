@@ -4,5 +4,20 @@
   list-style-type: none;
   display: grid;
   grid-template-columns: 100%;
-  gap: 20px;
+  gap: 21px;
+}
+
+@media #{$not-mobile} {
+  .catalog-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media #{$desktop-only} {
+  .catalog-items {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 54px 0 0;
+  }
 }

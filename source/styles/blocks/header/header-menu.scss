@@ -32,7 +32,12 @@
     max-width: 70%;
   }
 
+  .header-menu__header-menu-list {
+    gap: 44px;
+  }
+
   .header-menu__header-menu-button {
+    padding: 20px;
     &:active,
     &:active svg {
       background-color: $base-secondary;
@@ -43,7 +48,7 @@
   }
 
   .header-menu__header-menu-list-item {
-    width: 60px;
+    width: 16px;
   }
 }
 

@@ -6,9 +6,35 @@
 }
 
 .filter-controls__filter-select-wrapper {
-  margin: 36px 0 16px;
+  margin: 41px 0 16px;
 }
 
 .filter-controls__filter-controls-button {
   width: 100%;
+}
+
+@media #{$not-mobile} {
+  .filter-controls__filter-controls-wrapper {
+    flex-flow: row wrap;
+  }
+
+  .filter-controls__filter-controls-button {
+    &--wider {
+      width: 137px;
+    }
+
+    &--narrower {
+      width: 120px;
+    }
+  }
+
+  .filter-controls__filter-select-wrapper {
+    margin: 44px 0 30px;
+  }
+}
+
+@media #{$desktop-only} {
+  .filter-controls__filter-controls-button {
+    width: 149px;
+  }
 }

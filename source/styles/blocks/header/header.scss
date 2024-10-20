@@ -15,18 +15,11 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
-}
-
-@media #{$mobile-only} {
-
+  height: 100%;
 }
 
 @media #{$not-mobile} {
   .header {
     min-height: 80px;
   }
-}
-
-@media #{$desktop-only} {
-
 }

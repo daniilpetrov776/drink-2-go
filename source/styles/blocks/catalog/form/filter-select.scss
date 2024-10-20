@@ -3,6 +3,7 @@
   flex-flow: wrap;
   align-items: center;
   gap: 8px;
+  padding: 0 1px;
 }
 
 .filter-select__filter-select-label {
@@ -18,12 +19,23 @@
   line-height: 24px;
   font-weight: 600;
   color: $base-primary;
-  width: 165px;
+  font-family: inherit;
+  width: 160px;
   height: 32px;
   padding: 4px 15px 4px 10px;
   border: none;
   appearance: none;
   background-color: transparent;
+  transition: background 0.3s $smooth;
+
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
+  }
+
+  &:focus {
+    outline: solid 1px $base-primary;
+  }
 }
 
 .filter-select__select-wrapper {
@@ -34,5 +46,21 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 10px;
+  right: 3px;
+  transition: transform 0.3s $smooth;
+}
+
+@media #{$not-mobile} {
+  .filter-select {
+    justify-content: flex-end;
+  }
+}
+
+@media #{$desktop-only} {
+  .filter-select {
+    position: absolute;
+    top: 224px;
+    right: 0;
+    margin: 0;
+  }
 }

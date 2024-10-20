@@ -1,5 +1,5 @@
 .slide {
-  padding: 20px 0 60px;
+  padding: 10px 0 50px;
   min-width: 100%;
 
   transition: transform $smooth 1s;
@@ -55,23 +55,20 @@
   margin: 0 20px 0 0;
 }
 
-@media #{$mobile-only} {
-
-}
-
 @media #{$not-mobile} {
   .slide {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     flex-direction: column-reverse;
-    padding: 60px 0 0;
+    padding: 45px 0 0;
   }
 
   .slide__slide-title {
     margin: 4px 0 16px;
     font-size: 56px;
     line-height: 80px;
+    letter-spacing: 0.04em;
   }
 
   .slide__slide-image-wrapper {
@@ -83,6 +80,7 @@
   .slide__slide-description {
     font-size: 20px;
     line-height: 32px;
+    padding: 0 60px;
   }
 }
 

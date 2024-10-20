@@ -8,12 +8,12 @@
     <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
     <link href="./vendor/nouislider/nouislider.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-    <script type="module" src="./vendor/nouislider/nouislider.js" async></script>
-    <script type="module" src="scripts/index.js" async></script>
+    <script src="./vendor/nouislider/nouislider.js" defer></script>
+    <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="header" data-test="header">
-      <div class="container">
+      <div class="container container--320vwpx">
         <div class="header__header-wrapper">
           <div class="header__header-logo header-logo">
             <div class="header-logo__header-logo-image-wrapper">
@@ -63,8 +63,8 @@
                 </button>
               </li>
               <li class="header-menu__header-menu-list-item header-menu__header-menu-list-item--burger js-toggle-button">
-                <button class="header-menu__header-menu-button" type="button" aria-label="Меню сайта.">
-                  <svg class="header-menu__header-menu-icon header-menu-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="header-menu__header-menu-button header-menu__header-menu-button--burger" type="button" aria-label="Меню сайта.">
+                  <svg class="header-menu__header-menu-icon header-menu-icon header-menu-icon--burger" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use href="./icons/stack.svg#burger-icon"></use>
                   </svg>
                 </button>
@@ -206,7 +206,7 @@
                     Удобство
                   </h3>
                   <p class="feature__feature-description">
-                    Легко помещается и в карман, и в маленькую сумочку
+                    Легко помещается и в карман,<br> и в маленькую сумочку
                   </p>
                 </div>
               </li>
@@ -236,7 +236,7 @@
                     Экологичность
                   </h3>
                   <p class="feature__feature-description">
-                    Вся упаковка сделана из перерабатываемых материалов
+                    Вся упаковка сделана<br> из перерабатываемых материалов
                   </p>
                 </div>
               </li>
@@ -252,7 +252,7 @@
               <h2 class="catalog__catalog-section-title section-title">Каталог кофейных напитков</h2>
             </div>
             <form class="catalog__catalog-filter catalog-filter" method="get" action="https://echo.htmlacademy.ru">
-              <div class="catalog-filter__catalof-filter-wrapper">
+              <div class="catalog-filter__catalog-filter-wrapper">
                 <div class="catalog-filter__price-slider price-slider">
                   <p class="price-slider__form-title form-title">Цена</p>
                   <div class="price-slider__slider-wrapper">
@@ -314,14 +314,16 @@
               </div>
               <div class="catalog-filter__filter-controls filter-controls">
                 <div class="filter-controls__filter-controls-wrapper">
-                  <button class="filter-controls__filter-controls-button button button--primary" type="button">Применить</button>
-                  <button class="filter-controls__filter-controls-button button button--secondary" type="reset">Сбросить</button>
+                  <button class="filter-controls__filter-controls-button filter-controls__filter-controls-button--wider button button--primary" type="button">Применить</button>
+                  <button class="filter-controls__filter-controls-button filter-controls__filter-controls-button--narrower button button--secondary" type="reset">Сбросить</button>
                 </div>
                 <div class="filter-controls__filter-select-wrapper filter-select">
                   <p class="filter-select__filter-select-label">Сортировка:</p>
                   <div class="filter-select__select-wrapper">
                     <select class="filter-select__select-field" name="sort" id="sort">
                       <option value="default" selected>по умолчанию</option>
+                      <option value="default">сначала дорогие</option>
+                      <option value="default">сначала дешевые</option>
                     </select>
                     <svg class="filter-select__select-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#arrow-down-icon"></use>
@@ -340,12 +342,12 @@
                 </div>
                 <div class="catalog-product__catalog-product-content-wrapper">
                   <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
-                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -364,12 +366,12 @@
                 </div>
                 <div class="catalog-product__catalog-product-content-wrapper">
                   <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
-                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -388,12 +390,12 @@
                 </div>
                 <div class="catalog-product__catalog-product-content-wrapper">
                   <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
-                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -412,12 +414,12 @@
                 </div>
                 <div class="catalog-product__catalog-product-content-wrapper">
                   <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
-                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -436,12 +438,12 @@
                 </div>
                 <div class="catalog-product__catalog-product-content-wrapper">
                   <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
-                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -460,12 +462,12 @@
                 </div>
                 <div class="catalog-product__catalog-product-content-wrapper">
                   <h3 class="catalog-product__catalog-product-title article-title">Декаф Флэт Уайт</h3>
-                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии
+                  <p class="catalog-product__catalog-product-description">Кофе без кофеина из Эфиопии<br>
                     с натуральным фермерским молоком</p>
                 </div>
                 <div class="catalog-product__catalog-product-buy-wrapper">
                   <span class="catalog-product__catalog-product-price price">225₽</span>
-                  <button class="catalog-product__catalog-button button button--primary button--catalog">
+                  <button class="catalog-product__catalog-button button button--primary button--catalog" type="button">
                     <svg class="catalog-product__catalog-product-button-image" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use href="./icons/stack.svg#cart-plus-icon"></use>
                     </svg>
@@ -478,7 +480,7 @@
             </ul>
             <ul class="catalog__pagination pagination">
               <li class="pagination__pagination-item">
-                <button class="pagination__pagination-button pagination-button" type="button">
+                <button class="pagination__pagination-button pagination__pagination-button--wider pagination-button" id="prev-pagination" type="button">
                   <span class="pagination-button__pagination-text pagination-button__pagination-text--direction ">
                     Назад
                   </span>
@@ -488,28 +490,28 @@
                 </button>
               </li>
               <li class="pagination__pagination-item">
-                <button class="pagination__pagination-button pagination-button" type="button">
-                  <span class="pagination-button__pagination-text pagination-button__pagination-text">
+                <button class="pagination__pagination-button pagination-button pagination-button--number" type="button">
+                  <span class="pagination-button__pagination-text">
                     1
                   </span>
                 </button>
               </li>
               <li class="pagination__pagination-item">
-                <button class="pagination__pagination-button pagination-button pagination-button--active" type="button">
-                  <span class="pagination-button__pagination-text pagination-button__pagination-text">
+                <button class="pagination__pagination-button pagination-button pagination-button--active pagination-button--number" type="button">
+                  <span class="pagination-button__pagination-text">
                     2
                   </span>
                 </button>
               </li>
               <li class="pagination__pagination-item">
-                <button class="pagination__pagination-button pagination-button" type="button">
-                  <span class="pagination-button__pagination-text pagination-button__pagination-text">
+                <button class="pagination__pagination-button pagination-button pagination-button--number" type="button">
+                  <span class="pagination-button__pagination-text">
                     3
                   </span>
                 </button>
               </li>
               <li class="pagination__pagination-item">
-                <button class="pagination__pagination-button pagination-button" type="button">
+                <button class="pagination__pagination-button pagination__pagination-button--wider pagination__pagination-button--even-wider pagination-button" id="next-pagination" type="button">
                   <span class="pagination-button__pagination-text pagination-button__pagination-text--direction ">
                     Вперёд
                   </span>
@@ -528,12 +530,13 @@
           <div class="map__map-wrapper">
             <div class="map__map-image-wrapper">
               <picture>
-                <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" width="1440" height="540" type="image/webp">
-                <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x" width="1440" height="540" type="image/png">
-                <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.webp 1x, images/map/map-tablet@2x.webp 2x" width="768" height="480" type="image/webp">
-                <source media="(min-width: 768px)" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x" width="768" height="480" type="image/png">
-                <source media="(min-width: 320px)" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x" type="image/webp" width="320" height="420">
-                <img class="map__map-image" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" width="320" height="420" alt="Наш адрес на карте.">
+                <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" type="image/webp" width="1440" height="540">
+                <source media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x" type="image/png" width="1440" height="540">
+                <source media="(min-width: 768px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" type="image/webp" width="768" height="480">
+                <source media="(min-width: 768px)" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x" type="image/png" width="768" height="480">
+                <source media="(min-width: 320px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x" type="image/webp" width="320" height="420">
+
+                <img class="map__map-image" src="images/map/map-desktop@1x.png" srcset="images/map/map-desktop@2x.png 2x" width="320" height="420" alt="Наш адрес на карте.">
               </picture>
             </div>
           </div>
@@ -649,7 +652,7 @@
             </div>
           </div>
           <p class="footer__made-by made-by">
-            разработано в
+            Разработано в
             <a class="made-by__made-by-link" href="https://htmlacademy.ru/intensive/adaptive">
               HTML Academy
               <svg class="made-by__made-by-icon" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">

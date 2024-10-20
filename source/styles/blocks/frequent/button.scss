@@ -25,11 +25,33 @@
       background-color: $primary-darker;
     }
     transition: background $smooth 0.3s;
+
+    &:disabled {
+      background-color: $base-grey;
+      cursor: auto;
+    }
   }
 
   &--secondary {
     background-color: $base-white;
     color: $base-primary;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $primary-lighter;
+      color: $base-white;
+    }
+
+    &:active {
+      background-color: $primary-darker;
+      color: $base-white;
+    }
+    transition: background $smooth 0.3s, color $smooth 0.3s;
+
+    &:disabled {
+      background-color: $light-grey;
+      cursor: auto;
+    }
   }
 
   &--small {
@@ -40,16 +62,4 @@
     font-size: 14px;
     line-height: 20px;
   }
-}
-
-@media #{$mobile-only} {
-
-}
-
-@media #{$not-mobile} {
-
-}
-
-@media #{$desktop-only} {
-
 }
