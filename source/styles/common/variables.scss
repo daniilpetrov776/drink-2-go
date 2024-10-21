@@ -1,4 +1,3 @@
-/* здесь используйте глобальные переменные */
 $tablet-min-width: 768px;
 $tablet-max-width: 1439px;
 $desktop-min-width: 1440px;
@@ -15,24 +14,20 @@ $desktop-only: "(width >= #{$desktop-min-width})";
 $not-mobile: "(width >= #{$tablet-min-width})";
 $not-desktop: "(width <= #{$desktop-min-width})";
 
-// base colors
 $base-white: #ffffff;
 $base-grey: #bdbdbd;
 $base-black: #333333;
 $base-primary: #7859cf;
 $base-secondary: #f0ebff;
 
-// alt colors
 $primary-opacity: rgba(120, 89, 207, 0.25);
 $primary-lighter: #9070ec;
 $primary-darker: #593cac;
 $light-grey: #e2e2e2;
 
-// background colors
 $lightest-grey: #f8f8f8;
 $flat-white: #f3ebe1;
 $lavender-latte: #eae6fc;
 $espresso: #e5e6e8;
 
-// transition-timing-function
 $smooth: cubic-bezier(0.4, 0, 0.4, 1);

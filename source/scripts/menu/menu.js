@@ -1,8 +1,8 @@
-export const burgerButton = document.querySelector('.header-menu__header-menu-button--burger');
+const burgerButton = document.querySelector('.header-menu__header-menu-button--burger');
 const menuIcon = burgerButton.querySelector('.header-menu-icon--burger').children[0];
 const headerNav = document.querySelector('.header__header-nav');
 
-const checkViewportAndShowNav = () => {
+export const checkViewportAndShowNav = () => {
   if (window.innerWidth <= 767) {
     setTimeout(() => {
       if (headerNav) {
@@ -11,7 +11,6 @@ const checkViewportAndShowNav = () => {
     }, 1000);
   }
 };
-checkViewportAndShowNav();
 
 const burgerButtonClickHandler = () => {
   if (headerNav.classList.contains('header-nav--hidden')) {
