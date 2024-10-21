@@ -1,13 +1,3 @@
-.footer {
-  // background-color: #663399;
-  // color: #ffffff;
-  // padding: 10px 15px;
-}
-
-// .footer__footer-wrapper {
-//   padding: 20px 0 0;
-// }
-
 .footer__logo-wrapper {
   display: flex;
   flex-flow: wrap;
@@ -43,7 +33,7 @@
 
 @media #{$not-mobile} {
   .footer__footer-wrapper {
-    padding: 40px 0 0;
+    padding: 38px 0 0;
   }
 
   .footer__navigation-wrapper {

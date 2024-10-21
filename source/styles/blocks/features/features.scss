@@ -32,16 +32,27 @@
 }
 
 @media #{$not-mobile} {
+  .features__features-wrapper {
+    padding: 60px 0 0;
+  }
+
   .features__features-content-list {
-    padding: 0 10px 100px;
+    padding: 0 10px 87px;
+  }
+
+  .features__feature:nth-child(2) {
+    column-gap: 15px;
   }
 
   .features__features-text-title {
-    margin: 60px 0 0;
+    margin: 0;
+    // position: relative;
+    // top: -7px;
   }
 
   .features__features-section-title {
-    margin: 4px 0 60px;
+    margin: 0 0 50px;
+    letter-spacing: 0.02em;
   }
 }
 

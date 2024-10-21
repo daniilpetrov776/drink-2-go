@@ -53,6 +53,11 @@
 @media #{$not-mobile} {
   .filter-select {
     justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .filter-select__select-arrow {
+    right: 8px;
   }
 }
 
