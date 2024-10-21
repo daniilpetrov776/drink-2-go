@@ -1,3 +1,4 @@
+@import "../vendor/nouislider/nouislider.css";
 /* GLOBAL */
 @import "./common/variables.scss";
 @import "./common/global.scss";
@@ -24,6 +25,7 @@
 @import "./blocks/frequent/price.scss";
 @import "./blocks/frequent/section-title.scss";
 @import "./blocks/frequent/article-title.scss";
+@import "./blocks/frequent/br.scss";
 @import "./blocks/features/features.scss";
 @import "./blocks/features/feature.scss";
 @import "./blocks/map/map.scss";

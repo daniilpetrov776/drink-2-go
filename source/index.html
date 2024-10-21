@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
-    <link href="./vendor/nouislider/nouislider.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./favicon-48x48.png" sizes="48x48">
+    <link rel="icon" type="image/svg+xml" href="./favicon.ico">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./site.webmanifest">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="./vendor/nouislider/nouislider.js" defer></script>
     <script src="scripts/index.js" defer></script>
@@ -95,7 +99,7 @@
                   <div class="slide__slide-content-wrapper">
                     <span class="slide__slide-new text-title">Новинка!</span>
                     <h2 class="slide__slide-title">Декаф Флэт Уайт</h2>
-                    <p class="slide__slide-description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                    <p class="slide__slide-description">Свежесваренный кофе без кофеина<br class="mobile-br"> из Эфиопии<br class="tablet-br"> с натуральным фермерским молоком — то, что нужно<br class="desktop-br"> для расслабления после тяжёлого рабочего дня</p>
                     <div class="slide__price-wrapper">
                       <span class="slide__old-price">295₽</span>
                       <span class="slide__new-price price">225₽</span>
@@ -150,17 +154,17 @@
                 </div>
               </div>
             </div>
-            <button class="slider__slider-button slider-button slider-button--prev" aria-label="Предыдущий слайд." type="button">
+            <button class="slider__slider-button slider-button slider-button--prev slider-button-prev" aria-label="Предыдущий слайд." type="button">
               <svg class="slider-button__slider-arrow slider-button__slider-arrow--prev" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="./icons/stack.svg#arrow-left-icon"></use>
               </svg>
             </button>
-            <button class="slider__slider-button slider-button slider-button--next" aria-label="Следующий слайд." type="button">
+            <button class="slider__slider-button slider-button slider-button--next slider-button-next" aria-label="Следующий слайд." type="button">
               <svg class="slider-button__slider-arrow slider-button__slider-arrow--next" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="./icons/stack.svg#arrow-right-icon"></use>
               </svg>
             </button>
-            <div class="slider__slider-pagination">
+            <div class="slider__slider-pagination slider-pagination">
               <button class="slider__slider-pagination-button slider__slider-pagination-button--active" type="button" aria-label="переключить слайд"></button>
               <button class="slider__slider-pagination-button" type="button" aria-label="переключить слайд"></button>
               <button class="slider__slider-pagination-button" type="button" aria-label="переключить слайд"></button>
@@ -205,9 +209,7 @@
                   <h3 class="feature__feature-title article-title">
                     Удобство
                   </h3>
-                  <p class="feature__feature-description">
-                    Легко помещается и в карман,<br> и в маленькую сумочку
-                  </p>
+                  <p class="feature__feature-description">Легко помещается и в карман,<br> и в маленькую сумочку</p>
                 </div>
               </li>
               <li class="features__feature feature">
@@ -235,9 +237,7 @@
                   <h3 class="feature__feature-title article-title">
                     Экологичность
                   </h3>
-                  <p class="feature__feature-description">
-                    Вся упаковка сделана<br> из перерабатываемых материалов
-                  </p>
+                  <p class="feature__feature-description">Вся упаковка сделана<br> из перерабатываемых материалов</p>
                 </div>
               </li>
             </ul>
@@ -262,7 +262,7 @@
                   <label class="visually-hidden" for="max-value">Максимальная.</label>
                   <div class="price-slider__controls-wrapper">
                     <input class="price-slider__nouislider-input price-slider__nouislider-input--min" type="number" id="min-value" placeholder="0" name="min-value-control">
-                    <input class="price-slider__nouislider-input price-slider__nouislider-input--max" type="number" id="max-value" placeholder="900" value="900" name="max-value-control">
+                    <input class="price-slider__nouislider-input price-slider__nouislider-input--max" type="number" id="max-value" placeholder="900" name="max-value-control">
                   </div>
                 </div>
                 <div class="catalog-filter__type-radio type-radio">

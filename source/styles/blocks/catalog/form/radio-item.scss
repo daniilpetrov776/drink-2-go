@@ -91,3 +91,15 @@
     background-color: $base-white;
   }
 }
+
+@media #{$not-mobile} {
+  .radio-item__radio-label {
+    &::before {
+      left: -34px;
+    }
+
+    &::after {
+      left: -30px;
+    }
+  }
+}

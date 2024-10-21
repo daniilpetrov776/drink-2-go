@@ -15,8 +15,8 @@ const updateBackground = () => {
     sliderContainer.style.background = `linear-gradient(
       to bottom,
       ${backgroundColors[currentIndex % backgroundColors.length]} 0%,
-      ${backgroundColors[currentIndex % backgroundColors.length]} calc(100% - 188px),
-      #FFFFFF calc(100% - 188px),
+      ${backgroundColors[currentIndex % backgroundColors.length]} calc(100% - 205px),
+      #FFFFFF calc(100% - 205px),
       #FFFFFF 100%
   )`;
   } else {

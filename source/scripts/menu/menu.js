@@ -1,5 +1,5 @@
 export const burgerButton = document.querySelector('.header-menu__header-menu-button--burger');
-const menuIcon = document.querySelector('.header-menu-icon--burger').children[0];
+const menuIcon = burgerButton.querySelector('.header-menu-icon--burger').children[0];
 const headerNav = document.querySelector('.header__header-nav');
 
 const checkViewportAndShowNav = () => {
@@ -17,11 +17,11 @@ const burgerButtonClickHandler = () => {
   if (headerNav.classList.contains('header-nav--hidden')) {
     headerNav.classList.remove('header-nav--hidden');
     headerNav.classList.add('header-nav--visible');
-    menuIcon.href = './icons/stack.svg#menu-closed-icon';
+    menuIcon.href.baseVal = './icons/stack.svg#menu-closed-icon';
   } else {
     headerNav.classList.remove('header-nav--visible');
     headerNav.classList.add('header-nav--hidden');
-    menuIcon.href = './icons/stack.svg#burger-icon';
+    menuIcon.href.baseVal = './icons/stack.svg#burger-icon';
   }
 };
 

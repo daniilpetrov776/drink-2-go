@@ -82,12 +82,12 @@
   .slider-button {
     height: 714px;
 
-    // &--prev {
-    //   left: -80px;
-    // }
+    &--prev {
+      left: -40px;
+    }
 
-    // &--next {
-    //   right: -80px;
-    // }
+    &--next {
+      right: -40px;
+    }
   }
 }

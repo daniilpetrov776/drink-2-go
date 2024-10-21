@@ -34,8 +34,9 @@
   }
 
   .header-nav--visible {
-      transform: translateY(150px);
+    transform: translateY(150px);
   }
+
   .header-nav__nav-list {
     flex-flow: column;
   }
@@ -103,6 +104,7 @@
   .header-nav__nav-link {
     position: relative;
     padding: 32px 20px;
+    max-width: 100px;
 
     &--active::before {
       position: absolute;
@@ -116,8 +118,16 @@
   }
 }
 
+@media #{$tablet-only} {
+  .header-nav__nav-list {
+    gap: 6px;
+  }
+}
+
 @media #{$desktop-only} {
   .header-nav__nav-link {
+    max-width: 113px;
+
     &--active {
       color: $base-primary;
     }
@@ -132,5 +142,14 @@
     }
 
     transition: color $smooth 0.3s, background $smooth 0.3s;
+  }
+
+  .header-nav {
+    margin: 0 0 0 163px;
+    max-width: 43%;
+  }
+
+  .header-nav__nav-list {
+    gap: 20px;
   }
 }

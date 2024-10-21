@@ -1,0 +1,29 @@
+.mobile-br {
+  display: none;
+}
+
+.tablet-br {
+  display: none;
+}
+
+.desktop-br {
+  display: none;
+}
+
+@media #{$mobile-only} {
+  .mobile-br {
+    display: block;
+  }
+}
+
+@media #{$not-mobile} {
+  .tablet-br {
+    display: block;
+  }
+}
+
+@media #{$desktop-only} {
+  .desktop-br {
+    display: block;
+  }
+}

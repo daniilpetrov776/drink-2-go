@@ -23,3 +23,10 @@
     min-height: 80px;
   }
 }
+
+@media #{$desktop-only} {
+  .header__header-wrapper {
+    padding: 0 7px 0 0;
+    justify-content: flex-start;
+  }
+}
