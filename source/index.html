@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>Drink2Go</title>
+    <meta name="description"  content="Необычный кофе.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="./fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
     <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font">
     <link rel="icon" type="image/png" href="./favicon-48x48.png" sizes="48x48">
     <link rel="icon" type="image/svg+xml" href="./favicon.ico">
     <link rel="shortcut icon" href="./favicon.ico">
@@ -165,9 +168,15 @@
               </svg>
             </button>
             <div class="slider__slider-pagination slider-pagination">
-              <button class="slider__slider-pagination-button slider__slider-pagination-button--active" type="button" aria-label="переключить слайд"></button>
-              <button class="slider__slider-pagination-button" type="button" aria-label="переключить слайд"></button>
-              <button class="slider__slider-pagination-button" type="button" aria-label="переключить слайд"></button>
+              <button class="slider__slider-pagination-button slider__slider-pagination-button--active" type="button">
+                <span class="visually-hidden">слайд 1</span>
+              </button>
+              <button class="slider__slider-pagination-button" type="button">
+                <span class="visually-hidden">слайд 2</span>
+              </button>
+              <button class="slider__slider-pagination-button" type="button">
+                <span class="visually-hidden">слайд 3</span>
+              </button>
             </div>
           </div>
         </div>
@@ -269,19 +278,19 @@
                   <p class="type-radio__type-radio-form-title form-title">Наличие молока</p>
                   <ul class="catalog-filter__type-radio-list type-radio-list catalog-filter__list">
                     <li class="type-radio__radio-item radio-item">
-                      <input class="radio-item__radio-button radio-item__radio-button--active visually-hidden" type="radio" name="milk-type" id="any" checked>
+                      <input class="radio-item__radio-button radio-item__radio-button--active visually-hidden" type="radio" value="any" name="milk-type" id="any" checked>
                       <label class="radio-item__radio-label" for="any">Неважно</label>
                     </li>
                     <li class="type-radio__radio-item radio-item">
-                      <input class="radio-item__radio-button visually-hidden" type="radio" name="milk-type" id="animal">
+                      <input class="radio-item__radio-button visually-hidden" type="radio" value="animal" name="milk-type" id="animal">
                       <label class="radio-item__radio-label" for="animal">Только животное</label>
                     </li>
                     <li class="type-radio__radio-item radio-item">
-                      <input class="radio-item__radio-button visually-hidden" type="radio" name="milk-type" id="plant">
+                      <input class="radio-item__radio-button visually-hidden" type="radio" value="plant" name="milk-type" id="plant">
                       <label class="radio-item__radio-label" for="plant">Только растительное</label>
                     </li>
                     <li class="type-radio__radio-item radio-item">
-                      <input class="radio-item__radio-button visually-hidden" type="radio" name="milk-type" id="without" disabled>
+                      <input class="radio-item__radio-button visually-hidden" type="radio" value="without" name="milk-type" id="without" disabled>
                       <label class="radio-item__radio-label" for="without">Без молока</label>
                     </li>
                   </ul>
@@ -290,23 +299,23 @@
                   <p class="origin-checkboxes__origin-checkboxes-title form-title">Страна произрастания</p>
                   <ul class="origin-checkboxes__origin-checkboxes-list">
                     <li class="origin-checkboxes__checkbox-item checkbox-item">
-                      <input class="checkbox-item__checkbox-button visually-hidden checkbox-item__checkbox-button--active" type="checkbox" name="brasil" id="brasil" checked>
+                      <input class="checkbox-item__checkbox-button visually-hidden checkbox-item__checkbox-button--active" value="brasil" type="checkbox" name="origin" id="brasil" checked>
                       <label class="checkbox-item__checkbox-label" for="brasil">Бразилия</label>
                     </li>
                     <li class="origin-checkboxes__checkbox-item checkbox-item">
-                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" name="ethiopia" id="ethiopia">
+                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" value="ethiopia" name="origin" id="ethiopia">
                       <label class="checkbox-item__checkbox-label" for="ethiopia">Эфиопия</label>
                     </li>
                     <li class="origin-checkboxes__checkbox-item checkbox-item">
-                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" name="colombia" id="colombia">
+                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" value="colombia" name="origin" id="colombia">
                       <label class="checkbox-item__checkbox-label" for="colombia">Колумбия</label>
                     </li>
                     <li class="origin-checkboxes__checkbox-item checkbox-item">
-                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" name="costa-rica" id="costa-rica">
+                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" value="costa-rica" name="origin" id="costa-rica">
                       <label class="checkbox-item__checkbox-label" for="costa-rica">Коста-Рика</label>
                     </li>
                     <li class="origin-checkboxes__checkbox-item checkbox-item">
-                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" name="peru" id="peru" disabled>
+                      <input class="checkbox-item__checkbox-button visually-hidden" type="checkbox" value="peru" name="origin" id="peru" disabled>
                       <label class="checkbox-item__checkbox-label" for="peru">Перу</label>
                     </li>
                   </ul>
@@ -314,11 +323,11 @@
               </div>
               <div class="catalog-filter__filter-controls filter-controls">
                 <div class="filter-controls__filter-controls-wrapper">
-                  <button class="filter-controls__filter-controls-button filter-controls__filter-controls-button--wider button button--primary" type="button">Применить</button>
+                  <button class="filter-controls__filter-controls-button filter-controls__filter-controls-button--wider button button--primary" type="submit">Применить</button>
                   <button class="filter-controls__filter-controls-button filter-controls__filter-controls-button--narrower button button--secondary" type="reset">Сбросить</button>
                 </div>
                 <div class="filter-controls__filter-select-wrapper filter-select">
-                  <p class="filter-select__filter-select-label">Сортировка:</p>
+                  <label class="filter-select__filter-select-label" for="sort">Сортировка:</label>
                   <div class="filter-select__select-wrapper">
                     <select class="filter-select__select-field" name="sort" id="sort">
                       <option value="default" selected>по умолчанию</option>
