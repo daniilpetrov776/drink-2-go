@@ -38,6 +38,7 @@
 
   .header-menu__header-menu-button {
     padding: 20px;
+
     &:active,
     &:active svg {
       background-color: $base-secondary;
@@ -85,7 +86,7 @@
   }
 
   .header-menu__header-menu-list {
-    gap: 20px;
+    gap: 25px;
   }
 
   .header-menu__header-menu-button {
@@ -119,8 +120,18 @@
     color: $base-black;
     font-weight: 500;
     text-transform: uppercase;
-
+    max-width: 60px;
     display: block;
     margin: 0;
+  }
+}
+
+@media #{$desktop-only} {
+  .header-menu {
+    margin: 0 0 0 auto;
+  }
+
+  .header-menu__header-menu-button {
+    max-width: 122px;
   }
 }

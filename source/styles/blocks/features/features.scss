@@ -1,10 +1,10 @@
 .features__features-wrapper {
-  padding: 50px 0 0 0;
+  padding: 50px 0 0;
 }
 
 .features__features-content-list {
   margin: 0;
-  padding: 0 0 60px 0;
+  padding: 0 0 60px;
   list-style-type: none;
   display: flex;
   flex-flow: column wrap;
@@ -51,17 +51,23 @@
   }
 
   .features__features-section-title {
-    margin: 0 0 50px;
+    margin: 0 0 65px;
     letter-spacing: 0.02em;
+    position: relative;
+    top: 4px;
   }
 }
 
 @media #{$desktop-only} {
   .features__features-text-title {
-    margin: 100px 0 0;
+    margin: 0;
   }
 
   .features__features-section-title {
-    margin: 4px 0 80px;
+    margin: 0 0 84px;
+  }
+
+  .features__features-wrapper {
+    padding: 100px 0 0;
   }
 }

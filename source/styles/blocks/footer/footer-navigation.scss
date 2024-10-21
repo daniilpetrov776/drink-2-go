@@ -88,4 +88,8 @@
       width: 318px;
     }
   }
+
+  .footer-navigation__footer-title:not(:last-child) {
+    margin: 10px 0 13px;
+  }
 }

@@ -7,3 +7,9 @@
     margin: 16px 0 20px;
   }
 }
+
+@media #{$desktop-only} {
+  .type-radio__type-radio-form-title {
+    margin: 1 0 20px;
+  }
+}

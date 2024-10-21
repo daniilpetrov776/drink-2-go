@@ -67,9 +67,14 @@
 
   .feature__feature-content-wrapper {
     align-items: center;
+    width: 100%;
   }
 
   .feature__feature-description {
     text-align: center;
+  }
+
+  .feature__feature-icon-wrapper {
+    align-self: center;
   }
 }

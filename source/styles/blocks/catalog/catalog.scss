@@ -15,7 +15,7 @@
 }
 
 .catalog__catalog-section-title {
-  margin: 4px 0 4px;
+  margin: 4px 0;
 }
 
 .catalog__pagination {
@@ -59,6 +59,7 @@
 
   .catalog__pagination {
     grid-column: 2/5;
+    margin: 61px 0 0;
   }
 
   .catalog__catalog-section-title {

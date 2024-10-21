@@ -17,9 +17,21 @@
   }
 }
 
-.price-slider__form-title  {
+.price-slider__form-title {
   margin: 16px 0 30px;
 }
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+// input[type="number"]::-webkit-inner-spin-button,
+// input[type="number"]::-webkit-outer-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
 
 .price-slider__nouislider-input {
   font-family: inherit;
@@ -92,5 +104,9 @@
 
   .price-slider__controls-wrapper {
     gap: 50px;
+  }
+
+  .price-slider__form-title {
+    margin: 0 0 31px;
   }
 }

@@ -59,11 +59,17 @@
   }
 }
 
+@media #{$tablet-only} {
+  .footer__logo-wrapper {
+    align-items: center;
+  }
+}
+
 @media #{$desktop-only} {
   .footer__logo-wrapper {
     flex-flow: wrap column;
     align-items: flex-start;
-    max-width: 300px;
+    max-width: 286px;
   }
 
   .footer__navigation-wrapper {
@@ -74,6 +80,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 20px 30px;
+    column-gap: 62px;
   }
 }
